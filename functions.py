@@ -20,11 +20,16 @@ print("\n------------------- Challenge 1 -------------------\n")
 # **** Challenge 1: Problem 1 ****
 # Write a function called print_message() that prints any message you want.
 
+print("Hello")
 
 # **** Challenge 1: Problem 2 ****
 # Write a function called print_five_messages() that calls print_message() five times.
 
-
+print("Hello")
+print("Hello")
+print("Hello")
+print("Hello")
+print("Hello")
 # **** Challenge 1: Problem 3 ****
 # Write a function called get_user_input() that asks the user if they'd like to print your message
 # once or five times. Then call one of the two functions above based on what the user decides.

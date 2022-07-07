@@ -18,7 +18,7 @@ print(message)
 
 print("\n------------------- Challenge 1 -------------------\n")
 
-#print(f"Hi! My name is {name}")
+print(f"Hi! My name is {name}")
 #print(f"I'm in the {grade}th grade.")
 #print(f"A fun fact about me is that {funFact}")
 
@@ -38,14 +38,15 @@ print("\n------------------- Challenge 1 -------------------\n")
 # Create a string for the different lines of the Happy Birthday Song
 # Print out the song using the strings you declared.
 
-
-
-
+print("Happy birthday to you")
+print("Happy birthday to you")
+print("Happy birthday dear (name)")
+print("Happy birthday to you")
 # **** Challenge 1: Problem 3 ****
 # Print out a string that has brackets in it.
 
 
-
+print("Hello my age is (age)")
 
 # -------------------------------------------- 
 # Challenge 2: 
@@ -63,15 +64,19 @@ num2 = 10
 # Store the sum of num1 and num2 in a variable.
 # Print the sum.
 
-
+print(num1+num2)
+print("15")
 # **** Challenge 2: Problem 2 ****
 # Store the difference between sum (above) and 7 in a variable.
 # Print the difference.
 
+print("15-7")
+print("8")
 
 # **** Challenge 2: Problem 3 ****
 # Store the product of the difference and 3 in a variable.
 # Print the product.
+
 
 
 # **** Challenge 2: Problem 4 ****
