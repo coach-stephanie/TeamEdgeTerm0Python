@@ -12,16 +12,19 @@ print("\n------------------- Challenge 1 -------------------\n")
    # Prompt the user to enter their age.
    # Write conditional statements that print out whether the user is legally allowed to drive in your city. 
 
+# la = legal age
+# ua = user's age
+la = 16
 
 
-
-
-
-
-
-
-
-
+print('What is your age? Please enter below.')
+ua = input('Enter Your Age: ')
+print(f'Your age is {ua}\n')
+if int(ua) > la:
+   print('You are legally allowed to drive in New York City.')
+else:
+   print('You are not legally allowed to drive in New York City.')
+print('\n')
 
 
 # -------------------------------------------- 
@@ -32,11 +35,22 @@ print("\n------------------- Challenge 2 -------------------\n")
    # Create three variables and assign them random scores. 
    # Write conditional statements that check which is the highest score and prints it.
 
+import random
+score1 = random.randint(1 , 100)
+score2 = random.randint(1 , 100)
+score3 = random.randint(1 , 100)
 
+print(f'The first score is {score1}.')
+print(f'The second score is {score2}.')
+print(f'The third score is {score3}.')
+print('\n')
 
-
-
-
+if score1 > score2 and score1 > score3:
+   print('The first score is the highest score.')
+elif score2 > score1 and score2 > score3:
+   print('The second score is the highest score.')
+else:
+   print('The third score is the highest score.')
 
 
 
@@ -58,10 +72,19 @@ print("\n------------------- Challenge 3 -------------------\n")
 # Snowing: Wear gloves and a scarf 
 
 # Here's a variable to get you started:
-weather = "rainy"
 
+rainy = 'Bring an umbrella.'
+sunny = 'Wear a hat and sunglasses.'
+snowing = 'Wear gloves and a scarf.'
 
-
+import random
+weather = random.randint(1 , 3)
+if weather = 1:
+   print(f'It is rainy today.\n{rainy}')
+elif weather = 2:
+   print(f'It is sunny today.\n{sunny}')
+else:
+   print(f'It is snowing today.\n{snowing}')
 
 
 

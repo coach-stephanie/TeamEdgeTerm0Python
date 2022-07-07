@@ -4,7 +4,7 @@
 # -------------------------------------------- 
 
 # Example
-message = "Hello World!"
+message="Hello World!"
 print(message)
 
 # -------------------------------------------- 
@@ -12,15 +12,30 @@ print(message)
 # 
 # Imagine it's the first day of class. (Wait, it is the first day isn't it..Deja vu?) 
 # Everyone's participating in an icebreaker and has to introduce themselves. 
-# It goes something like:
+# It goes something like: 
 # (Hint: Remove the # signs in front of the print statements below so your code will run!)
 # -------------------------------------------- 
 
 print("\n------------------- Challenge 1 -------------------\n")
 
-#print(f"Hi! My name is {name}")
-#print(f"I'm in the {grade}th grade.")
-#print(f"A fun fact about me is that {funFact}")
+name='Benny'
+grade=9
+funFact="... I don't think I have one"
+
+print(f'Hi! My name is {name}.')
+print('Data type: String\n')
+print(f"I'm in the {grade}th grade.")
+print('Data type: Int\n')
+print(f'A fun fact about me is that {funFact}.')
+print('Data type: String\n\n\n')
+
+# --------------------------------------------
+
+HappyBirthday='Happy Birthday to you'
+
+print(f'{HappyBirthday},\n{HappyBirthday}.')
+print(f'Happy Birthday dear {name},')
+print(f'{HappyBirthday}.')
 
 
 # **** Challenge 1: Problem 1 ****
@@ -56,8 +71,22 @@ print("\n------------------- Challenge 1 -------------------\n")
 print("\n------------------- Challenge 2 -------------------\n")
 
 # Here are some variables to get you started
-num1 = 5
-num2 = 10
+num1=5
+num2=10
+sum=num1+num2
+difference=sum+7
+product=difference*3
+power=product^2
+quotient=power/4
+remainder=quotient/2
+
+
+print(f'Sum is {sum}')
+print(f'Difference is {difference}')
+print(f'Product is {product}')
+print(f'Power is {power}')
+print(f'Quotient is {quotient}')
+print(f'Remainder is {remainder}\n')
 
 # **** Challenge 2: Problem 1 ****
 # Store the sum of num1 and num2 in a variable.
@@ -94,6 +123,9 @@ num2 = 10
 # For example, given the number 4, the program should print 3 and 5. 
 # Your code should work even if the value of the variable is changed.
 
-num = 9
+num1 = 9
+sum1 = num1+1
+difference1 = num1-1
 
+print(f'Values are {sum1}, and {difference1}\n')
 # -------------------------------------------- 
