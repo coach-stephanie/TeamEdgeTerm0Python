@@ -3,6 +3,9 @@
 # Day 2 Challenges
 # -------------------------------------------- 
 
+from calendar import SUNDAY
+
+
 message = "\nWelcome to Day 2.\nToday we are learning about conditionals.\nLet's practice writing some conditionals of our own!"
 print(message)
 # -------------------------------------------- 
@@ -12,12 +15,15 @@ print("\n------------------- Challenge 1 -------------------\n")
    # Prompt the user to enter their age.
    # Write conditional statements that print out whether the user is legally allowed to drive in your city. 
 
+age = 15
+rulea = 16
+print ("Can you drive?")
 
+if age >= rulea:
+   print("You can drive.")
 
-
-
-
-
+if  age < rulea:
+   print ("You can't drive")
 
 
 
@@ -32,13 +38,19 @@ print("\n------------------- Challenge 2 -------------------\n")
    # Create three variables and assign them random scores. 
    # Write conditional statements that check which is the highest score and prints it.
 
+one = 58
+two = 23
+three = 65
+if (one >= two) and  (one >= three):
+   print(f"{one} is the highest score")
 
 
+if (two >= one) and  (two >= three):
+   print(f"{one} is the highest score")
 
 
-
-
-
+if (three >= two) and  (three >= one):
+   print(f"{one} is the highest score")
 
 
 # -------------------------------------------- 
@@ -59,14 +71,25 @@ print("\n------------------- Challenge 3 -------------------\n")
 
 # Here's a variable to get you started:
 weather = "rainy"
+temp = 50
 
+if (weather == "rainy") and (temp >= 60):
+   print("Bring an umbrella and a light jacket")
 
+if (weather == "rainy") and (temp < 60):
+   print("Bring an umbrella and a warm jacket")
 
+if (weather == "Sunny") and ( temp >= 85):
+   print("Wear a hat, sunscreen, light clothes and sunglasses")
 
+if (weather == "Sunny") and ( temp < 85):
+   print("Wear a hat, and sunglasses")
 
+if (weather == "Snowing") and (temp >= 30) and (temp < 59):
+   print("Wear gloves and a scarf ")
 
-
-
+if (weather == "Snowing") and (temp >= -100) and (temp < 5):
+   print("Don't go")
 
 
 
@@ -106,11 +129,39 @@ print("\n------------------- Challenge 4 -------------------\n")
 # Make sure to add a statement that accounts for any numbers out of range! 
 
 
+print("Enter the number of the day:")
+day = input()
 
 
+if day == 1:
+   print("monday")
 
 
+if day == 2:
+   print("tuesday")
 
+
+if day == 3:
+   print("wendsday")
+
+
+if day == 4:
+   print("thursday")
+
+
+if day == 5:
+   print("friday")
+
+
+if day == 6:
+   print("saturday")
+
+
+if day == 7:
+   print("sunday")
+
+if day > 7:
+   print("Error")
 
 
 
