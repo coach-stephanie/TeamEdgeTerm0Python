@@ -4,7 +4,7 @@
 # -------------------------------------------- 
 
 # Example
-message = "Hello World!"
+message = "Hello world"
 print(message)
 
 # -------------------------------------------- 
@@ -18,33 +18,36 @@ print(message)
 
 print("\n------------------- Challenge 1 -------------------\n")
 
-#print(f"Hi! My name is {name}")
-#print(f"I'm in the {grade}th grade.")
-#print(f"A fun fact about me is that {funFact}")
+name = 'Marleny'
+grade = 4
+funfact = 'play baseball'n
 
-
+print('My name is {name}')
+print('I,m in the {grade}th grade')
+print('A fun fact about me is {funfact}')
 # **** Challenge 1: Problem 1 ****
 # Initialize the variables used in the {} with your data for the three statements above! 
 # Hint: Also think about where you would initialize those variables
-
+print('My name is {marleny}')
+print('I,m in the {4}th grade')
+print('A fun fact about me')
 
 # **** Upchallenge! ****
 # Can you also print out the data type of the variables? 
-
-
-
+print(type(name))
+print(type(grade))
+print(type(fun fact))
 
 # **** Challenge 1: Problem 2 ****
 # Create a string for the different lines of the Happy Birthday Song
 # Print out the song using the strings you declared.
-
-
-
-
+print('Happy birthday to you')
+print('Happy birthday to you')
+print('Happy birday dear {marleny}')
+print('Happy birthday to you')
 # **** Challenge 1: Problem 3 ****
 # Print out a string that has brackets in it.
-
-
+print('I like this type of dog {dog}')
 
 
 # -------------------------------------------- 
