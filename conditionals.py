@@ -1,4 +1,4 @@
-
+import random
 # -------------------------------------------- 
 # Day 2 Challenges
 # -------------------------------------------- 
@@ -12,7 +12,12 @@ print("\n------------------- Challenge 1 -------------------\n")
    # Prompt the user to enter their age.
    # Write conditional statements that print out whether the user is legally allowed to drive in your city. 
 
+#age = int(input("How old are you? "))
+#if age < 18 or age > 80:
+#   print("You cannot drive")
 
+#else:
+#   print("You can drive")
 
 
 
@@ -131,9 +136,17 @@ print("\n------------------- Challenge 5 -------------------\n")
 # Those are a lot of conditions...
 # Your challenge is to translate the steps above into conditionals which will evaluate if the 
 # year stored in a variable is/was a leap year.
-
-
-
-
+ 
+year = int(input("enter year \n"))
+if year%4==0:
+   if year%100==0:
+      if year%400==0:
+         print("This is a leap year. It has 366 days")
+      else:
+         print("This is not a leap year. It has 365 days")
+   else:
+      print("This is a leap year. It has 366 days")
+else:
+   print("This is not a leap year. It has 365 days")
 
 
