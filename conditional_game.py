@@ -77,21 +77,51 @@ import random
   # -------------------------------------------- 
 
 
+ans = random.randint(1, 19)
+print('Welcome to Magic 8 Ball')
+question = input("What is your question?(Enter a yes or no question)")
 
+if ans == 1:
+	ans = 'It is certain.'
+elif ans == 2:
+	ans = 'It is decidedly so.'
+elif ans == 3:
+	ans = 'Without a doubt.'
+elif ans == 4:
+	ans = 'Yes - definitely.'
+elif ans == 5:
+	ans = 'You may rely on it.'
+elif ans == 6:
+	ans = 'As I see it, yes.'
+elif ans == 7:
+	ans = 'Outlook good.'
+elif ans == 8:
+	ans = 'Yes.'
+elif ans == 9:
+	ans = 'Signs point to yes.'
+elif ans == 10:
+	ans = 'Reply hazy, try again.'
+elif ans == 11:
+	ans = 'Ask again later.'
+elif ans == 12:
+	ans = 'Better not tell you now.'
+elif ans == 13:
+	ans = 'Cannot predict now.'
+elif ans == 14:
+	ans = 'Concentrate and ask again.'
+elif ans == 15:
+	ans = "Don't count on it."
+elif ans == 16:
+	ans = 'My reply is no.'
+elif ans == 17:
+	ans = 'My sources say no.'
+elif ans == 18:
+	ans = 'Outlook not so good.'
+else:
+	ans = 'Very doubtful.'
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(ans)
+print('\n')
 
 
 
@@ -109,7 +139,7 @@ import random
 
 
 
-
+ 
 
 
 

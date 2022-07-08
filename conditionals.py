@@ -14,16 +14,16 @@ print("\n------------------- Challenge 1 -------------------\n")
 
 # la = legal age
 # ua = user's age
-la = 16
+la = 18
 
 
 print('What is your age? Please enter below.')
 ua = input('Enter Your Age: ')
 print(f'Your age is {ua}\n')
-if int(ua) > la:
-   print('You are legally allowed to drive in New York City.')
+if int(ua) >= la:
+   print('You are legally allowed to drive in New York City. Congrats!')
 else:
-   print('You are not legally allowed to drive in New York City.')
+   print('You are not legally allowed to drive in New York City. The minimum age is 18.')
 print('\n')
 
 
@@ -73,25 +73,30 @@ print("\n------------------- Challenge 3 -------------------\n")
 
 # Here's a variable to get you started:
 
-rainy = 'Bring an umbrella.'
-sunny = 'Wear a hat and sunglasses.'
-snowing = 'Wear gloves and a scarf.'
+rainy = 'and bring an umbrella with you.'
+sunny = 'and bring a hat, and sunglasses.'
+snowing = 'and bring gloves, and your scarf.'
 
 import random
 weather = random.randint(1 , 3)
-if weather = 1:
-   print(f'It is rainy today.\n{rainy}')
-elif weather = 2:
-   print(f'It is sunny today.\n{sunny}')
+temperature = random.randint(30 , 100)
+if weather == 1:
+   weather = rainy
+   print(f'It is rainy today.')
+elif weather == 2:
+   weather = sunny
+   print(f'It is sunny today.')
 else:
-   print(f'It is snowing today.\n{snowing}')
+   weather = snowing
+   print(f'It is snowing today.')
+   temperature = random.randint(30 , 50)
 
-
-
-
-
-
-
+if temperature >= 80:
+   print(f'It is {temperature} degrees outside, you might want to dress lightly today,{weather}')
+elif temperature <= 79:
+   print(f'It is {temperature} degrees outside, You should dress moderately,{weather}')
+elif temperature <=50:
+   print(f'It is {temperature} degrees outside, bring out your heavy jackets,{weather}')
 
 
 
@@ -129,7 +134,27 @@ print("\n------------------- Challenge 4 -------------------\n")
 # Make sure to add a statement that accounts for any numbers out of range! 
 
 
+# dotw = day of the week
+dotw = input('What day of the week is it today? Please Enter a number: \n')
 
+dotw = int(dotw)
+if dotw == 1:
+   print("It's Monday!")
+elif dotw == 2:
+   print("It's Tuesday!")
+elif dotw == 3:
+   print("It's Wednesday!")
+elif dotw == 4:
+   print("It's Thursday!")
+elif dotw == 5:
+   print("It's Friday!")
+elif dotw == 6:
+   print("It's Saturday!")
+elif dotw == 7:
+   print("It's Sunday!")
+else:
+   print('THERES ONLY 7 DAYS IN A WEEK, THE NUMBER YOU ENTERED IS INVALID!!!') 
+   print('Please try again later with a number from 1-7')
 
 
 
@@ -155,8 +180,16 @@ print("\n------------------- Challenge 5 -------------------\n")
 # Your challenge is to translate the steps above into conditionals which will evaluate if the 
 # year stored in a variable is/was a leap year.
 
+year = input('Please enter the year: ')
+leapy = "It is/was a leap year."
+nleapy= "It isn't/wasn't a leap year." 
 
-
-
-
-
+year = int(year)
+if year%4 == 0:
+   if year%100 == 0:
+      if year%400 == 0:
+         print(leapy)
+   else:
+      print(leapy)
+else:
+   print(nleapy)

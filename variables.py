@@ -76,9 +76,9 @@ num2=10
 sum=num1+num2
 difference=sum+7
 product=difference*3
-power=product^2
+power=product**2
 quotient=power/4
-remainder=quotient/2
+remainder=quotient%2
 
 
 print(f'Sum is {sum}')

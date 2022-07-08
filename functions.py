@@ -24,6 +24,8 @@ print("\n------------------- Challenge 1 -------------------\n")
 # **** Challenge 1: Problem 2 ****
 # Write a function called print_five_messages() that calls print_message() five times.
 
+message = 'hello'
+print_five_messages()
 
 # **** Challenge 1: Problem 3 ****
 # Write a function called get_user_input() that asks the user if they'd like to print your message
