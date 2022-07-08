@@ -31,12 +31,30 @@ print("My Simple Calculator")
 
 
 
+def add():
+	print("What is the first number")
+	numb1 = int(input())
+
+	print("What is the second number")
+	numb2 = int(input())
+	sum12 = numb1 + numb2
+	print(f"{numb1} + {numb2} = {sum12}")
+
+
+
 
 
 
 
 # Write a function called sub_numbers that will take two numbers and return the difference.
+def subtract():
+	print("What is the first number")
+	numb1 = int(input())
 
+	print("What is the second number")
+	numb2 = int(input())
+	difference12 = numb1 - numb2
+	print(f"{numb1} - {numb2} = {difference12}")
 
 
 
@@ -44,13 +62,12 @@ print("My Simple Calculator")
 # ------------
 # Testing Code - Uncomment the code below to test your code!
 
-# check_answers(add_numbers(5, 15), 20)
-# check_answers(add_numbers(3, 18), 21)
-# check_answers(add_numbers(12, 28), 40)
+#check_answers(add_numbers(3, 18), 21)
+#check_answers(add_numbers(12, 28), 40)
 
-# check_answers(sub_numbers(18, 7), 11)
-# check_answers(sub_numbers(11, 9), 2)
-# check_answers(sub_numbers(18, 21), -3)
+#check_answers(sub_numbers(18, 7), 11)
+#check_answers(sub_numbers(11, 9), 2)
+#check_answers(sub_numbers(18, 21), -3)
 
 # -------------------------------------------- 
 
@@ -69,11 +86,27 @@ print("My Simple Calculator")
 # Write a function called multiply_numbers that will take two numbers and return the product.
 
 
+def multiply():
+	print("What is the first number")
+	numb1 = int(input())
 
+	print("What is the second number")
+	numb2 = int(input())
+	product12 = numb1 * numb2
+	print(f"{numb1}* {numb2} = {product12}")
 
 
 
 # Write a function called divide_numbers that will take two numbers and return the quotient.
+
+def divide():
+	print("What is the first number")
+	numb1 = int(input())
+
+	print("What is the second number")
+	numb2 = int(input())
+	quotient12 = numb1 / numb2
+	print(f"{numb1}/{numb2} = {quotient12}")
 
 
 
@@ -106,14 +139,23 @@ print("My Simple Calculator")
 
 
 
+def calc():
+	print("+, -, /, *")
+	opera = input()
+	if opera == "+":
+		add()
+	if opera == "-":	
+		subtract()
+	if opera == "/":
+		divide()
+	if opera == "*":
+		multiply()
 
 
 
 
 
-
-
-
+calc()
 
 
 
