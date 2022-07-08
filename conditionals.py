@@ -4,6 +4,7 @@
 # -------------------------------------------- 
 
 from calendar import SUNDAY
+from re import S
 
 
 message = "\nWelcome to Day 2.\nToday we are learning about conditionals.\nLet's practice writing some conditionals of our own!"
@@ -15,15 +16,13 @@ print("\n------------------- Challenge 1 -------------------\n")
    # Prompt the user to enter their age.
    # Write conditional statements that print out whether the user is legally allowed to drive in your city. 
 
-age = 15
-rulea = 16
-print ("Can you drive?")
+print('Enter your age:')
+age = input()
+if (age < "18") :
+   print("You can't drive")
 
-if age >= rulea:
-   print("You can drive.")
-
-if  age < rulea:
-   print ("You can't drive")
+if (age >= "18"):
+   print("You can drive")
 
 
 
@@ -37,10 +36,12 @@ print("\n------------------- Challenge 2 -------------------\n")
 # Who placed first?
    # Create three variables and assign them random scores. 
    # Write conditional statements that check which is the highest score and prints it.
+import random
 
-one = 58
-two = 23
-three = 65
+
+one = (random.randrange(1,100))
+two = (random.randrange(1,100))
+three = (random.randrange(1,100))
 if (one >= two) and  (one >= three):
    print(f"{one} is the highest score")
 
@@ -132,35 +133,28 @@ print("\n------------------- Challenge 4 -------------------\n")
 print("Enter the number of the day:")
 day = input()
 
-
-if day == 1:
+if day == "1":
    print("monday")
 
-
-if day == 2:
+if day == "2":
    print("tuesday")
 
-
-if day == 3:
+if day == "3":
    print("wendsday")
 
-
-if day == 4:
+if day == "4":
    print("thursday")
 
-
-if day == 5:
+if day == "5":
    print("friday")
 
-
-if day == 6:
+if day == "6":
    print("saturday")
 
-
-if day == 7:
+if day == "7":
    print("sunday")
 
-if day > 7:
+if day > "7":
    print("Error")
 
 
@@ -183,8 +177,13 @@ print("\n------------------- Challenge 5 -------------------\n")
 # Your challenge is to translate the steps above into conditionals which will evaluate if the 
 # year stored in a variable is/was a leap year.
 
-
-
-
-
-
+print("What is the year?")
+year = int(input())
+if (year % 4 == 0):
+   if (year % 100 == 0):
+      if(year % 400 == 0):
+         print ("It's a leap year")
+   else:
+      print("It's a leap year")
+else:
+   print("It's not a leap year")
