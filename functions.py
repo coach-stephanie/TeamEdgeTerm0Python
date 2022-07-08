@@ -1,3 +1,4 @@
+import random
 # -------------------------------------------- 
 
 	# You've just learned about functions.
@@ -20,32 +21,62 @@ print("\n------------------- Challenge 1 -------------------\n")
 # **** Challenge 1: Problem 1 ****
 # Write a function called print_message() that prints any message you want.
 
+def print_message():
+	print('Hello')
+
+print_message('hello')
 
 # **** Challenge 1: Problem 2 ****
 # Write a function called print_five_messages() that calls print_message() five times.
 
-message = 'hello'
-print_five_messages()
+def print_five_messages():
+	print_message()
+	print_message()
+	print_message()
+	print_message()
+	print_message()
+	print('\n')
 
+print_five_messages()
 # **** Challenge 1: Problem 3 ****
 # Write a function called get_user_input() that asks the user if they'd like to print your message
 # once or five times. Then call one of the two functions above based on what the user decides.
 
+def get_user_input():
+	gui = int(input('Do you want to print 1 or 5 times?'))
 
+	if gui == 1:
+		print_message()
+	elif gui == 5:
+		print_five_messages()
+	else:
+		print('Invalid')
+
+get_user_input()
 # **** Challenge 1: Problem 4 ****
 # Write a function called print_greeting() that prints a greeting message to the user.
 
+def print_greeting():
+	print('Greetings\n')
 
+print_greeting()
 # **** Challenge 1: Problem 5 ****
 # Write a function called print_closing() that prints a goodbye message to the user.
 
+def print_closing():
+	print('Goodbye\n')
 
+print_closing()
 # **** Challenge 1: Problem 6 ****
 # Write a function called run() that greets the user, asks them for input, and sends a goodbye message.
 # Remember! Use the functions that you've already made. Don't hardcode anything!
 
+def run():
+	get_user_input()
+	print_closing()
 
-
+run()
+print('\n--------------------\n')
 # -------------------------------------------- 
 
 # Challenge 2: Functions are also able to take input and return output. 
@@ -67,11 +98,19 @@ print("\n------------------- Challenge 2 -------------------\n")
 
 # -------------------------------------------- 
 
+num1 = int(input('Enter Any Number: '))
+num2 = int(input('Enter Any Number: '))
 
+def sum_double():
+	if num1 == num2:
+		sum = (num1 + num2) * 2
+		print(sum)
+	else:
+		sum = num1 + num2
+		print(sum)
+	print('\n')
 
-
-
-
+sum_double()
 
 # Make sure to test your code! Write a few function calls to make sure your code works!
 
@@ -88,11 +127,18 @@ print("\n------------------- Challenge 2 -------------------\n")
 
 # -------------------------------------------- 
 
+num1 = int(input('Enter Any Number: '))
+num2 = int(input('Enter Any Number: '))
 
+def makes_10():
+	sum = num1 + num2
+	if sum == 10 or num1 == 10 or num2 == 10:
+		print('True')
+	else:
+		print('False')
+	print('\n')
 
-
-
-
+makes_10()
 # Make sure to test your code! Write a few function calls to make sure your code works!
 
 # -------------------------------------------- 
@@ -113,12 +159,50 @@ print("\n------------------- Challenge 2 -------------------\n")
 
 # -------------------------------------------- 
 
+def alarm_clock():
+	vac = input("Please enter 'on' or 'off' for vacation mode: ")
+	dotw = (input('Please enter the day of the week (First three letters, Cap first letter): '))
+# dotw = day of the week
 
+	if vac == 'off':
+		if dotw == 'Sun':
+			print('Today is Sunday, alarm will ring at 10:00am.')
+		elif dotw == 'Mon':
+			print('Today is Monday, alarm will ring at 7:00am.')
+		elif dotw == 'Tue':
+			print('Today is Tuesday, alarm will ring at 7:00am.')
+		elif dotw == 'Wed':
+			print('Today is Wednesday, alarm will ring at 7:00am.')
+		elif dotw == 'Thu':
+			print('Today is Thursday, alarm will ring at 7:00am.')
+		elif dotw == 'Fri':
+			print('Today is Friday, alarm will ring at 7:00am.')
+		elif dotw == 'Sat':
+			print('Today is Saturday, alarm will ring at 10:00am.')
+		else:
+			print('Invalid Value')
+	elif vac == 'on':
+		if dotw == 'Sun':
+			print('Today is a vacation Sunday, alarm will not ring.')
+		elif dotw == 'Mon':
+			print('Today is a vacation Monday, alarm will ring at 10:00am.')
+		elif dotw == 'Tue':
+			print('Today is a vacation Tuesday, alarm will ring at 10:00am.')
+		elif dotw == 'Wed':
+			print('Today is a vacation Wednesday, alarm will ring at 10:00am.')
+		elif dotw == 'Thu':
+			print('Today is a vacation Thursday, alarm will ring at 10:00am.')
+		elif dotw == 'Fri':
+			print('Today is a vacation Friday, alarm will ring at 10:00am.')
+		elif dotw == 'Sat':
+			print('Today is a vacation Saturday, alarm will not ring.')
+		else:
+			print('Invalid Value')
+	else:
+		print('Invalid Value')
+	print('\n')
 
-
-
-
-
+alarm_clock()
 # Make sure to test your code! Write a few function calls to make sure your code works!
 
 # -------------------------------------------- 
@@ -138,11 +222,20 @@ print("\n------------------- Challenge 2 -------------------\n")
 
 # -------------------------------------------- 
 
+def speeding_ticket():
+	speed = random.randint(30, 100)
 
+	if speed <= 60:
+		print("Police Officer: Sorry, I was mistaken. You won't be getting a speeding ticket.")
+	elif speed >= 61 and speed <= 80:
+		diff = speed - 60
+		print(f"Police Officer: You were {diff}mph above the speed limit, heres a small speeding fine.")
+	elif speed >= 81:
+		diff = speed - 60
+		print(f"Police Officer: You were {diff}mph above the speed limit, you are now detained for reckless driving.")
+	else:
+		print('Error')
+	print('\n')
 
-
-
-
-
-
+speeding_ticket()
 # Make sure to test your code! Write a few function calls to make sure your code works!
