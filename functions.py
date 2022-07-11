@@ -41,9 +41,9 @@ print_five_messages()
 # once or five times. Then call one of the two functions above based on what the user decides.
 
 def get_user_input():
-ask = int(input("How many prints"))
+	ask = int(input("How many prints"))
 
-if ask
+
 
 get_user_input()
 # **** Challenge 1: Problem 4 ****
@@ -82,9 +82,9 @@ get_user_input()
 # -------------------------------------------- 
 def sum_double():
 
-return a+ball
+return a+b
 if a==b:
-return (a+b)*2
+	return (a+b)*2
 sum_double()
 
 

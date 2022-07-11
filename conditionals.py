@@ -33,16 +33,16 @@ import random
    # Create three variables and assign them random scores. 
    # Write conditional statements that check which is the highest score and prints it.
 
-#var1 = random.randint(10,20)
-#var2 = random.randint(10,20)
-#var3 = random.randint(10,20)
+var1 = random.randint(10,20)
+var2 = random.randint(10,20)
+var3 = random.randint(10,20)
 
-#if var1 > var2 and var1 > var3:
- #  print("One wins!")
-   #elif two > one and two > 3:
-    #  print("Two wins")
-   #   else:
-  #       print("three wins!")
+if var1 > var2 and var1 > var3:
+   print("One wins!")
+elif var2 > var1 and var2 > var3:
+   print("Two wins")
+else:
+   print("three wins!")
 
 
 
@@ -65,17 +65,28 @@ import random
 # Snowing: Wear gloves and a scarf 
 
 # Here's a variable to get you started:
-#weather = "rainy"
-#degrees = 60
-#if weather == "rainy" and degrees == 30:
- #  print("bring an umbrella")
 
-#if weather == "sunny" and degrees == 90:
- #  print("wear a hat and maybe some sunglasses")
-#elif weather == "stormy"and degrees == 60:
-#   print("Dont go out!")
-#else:
-#    print("wear gloves and a coat!!")
+
+
+
+
+weather = "rainy"
+degrees = random.randint(0,90)
+if weather == "rainy" and degrees <= 30:
+  print("bring an umbrella and a coat")
+
+elif weather == "sunny" and degrees >= 80:
+  print("wear a hat and maybe some sunglasses")
+
+elif weather == "stormy" and degrees <= 60:
+  print("Dont go out!")
+
+elif weather == "moderate" and degrees > 50:
+   print("Wear a sweater it's chilly")
+elif weather == "moderate" and degrees <50:
+   print("Wear some shorts")
+else: 
+   print("Look out the window and you decide")
 
 
 
@@ -101,10 +112,17 @@ import random
    # Hint: You will need another variable to keep track of the temperature.
 
 
+weather = "overcast"
+degrees = random.randint(0,91)
+if weather == "overcast" and degrees >60:
+   print("wear a t-shirt and some sweatpants")
 
+elif weather == "overcast" and degrees <60 and degrees >30:
+   print("Maybe a light sweater will do")
+elif weather == "overcast" and degrees <30:
+   print("Get yourself a jacket ASAP")
 
-
-
+#CREDIT TO STEVEN FOR GIVING ME THE IDEA TO ADD EXTRA DEGREES ON LINE 120
 
 
 
@@ -120,32 +138,32 @@ import random
 # and print out the corresponding day of the week. 
 # Make sure to add a statement that accounts for any numbers out of range! 
 
-
+day = input("Enter day")
 
 #day = input("Enter a day of the week")
-#if day == 1:
-   #print("monday")
+if day == 1:
+   print("monday")
 
-   #if day == 2:
-      #print("Tuesday") 
+elif day == 2:
+   print("Tuesday") 
 
-#if day == 3:
-   #   print("Wednesday") 
+elif day == 3:
+   print("Wednesday") 
 
-#if day == 4:
-      #print("Thursday") 
+elif day == 4:
+   print("Thursday") 
 
-#if day == 5:
-  #    print("Friay") 
+elif day == 5:
+   print("Friay") 
 
 
- #if day == 6:
-  #    print("Saturday")
+elif day == 6:
+   print("Saturday")
 
 
        
-   #if day == 7:
-   #      print("Sunday") 
+elif day == 7:
+   print("Sunday") 
 
 # -------------------------------------------- 
 
@@ -165,16 +183,16 @@ import random
 # year stored in a variable is/was a leap year.
 
 #year = int(input("Enter year \n"))
-
-#if year%4==0:
-   #if year%100==0:
-    #  if year%400==0:
-    #     print("This is a leap year")
-     # else:
-      #   print("This is not a leap year")
-   #else: 
-     # print("This is a leap year")
-   #else:
-      #print("This is not a leap year")
+year = int(input("Enter year"))
+if year%4==0:
+   if year%100==0:
+     if year%400==0:
+        print("This is a leap year")
+     else:
+        print("This is not a leap year")
+   else: 
+     print("This is a leap year")
+else:
+   print("This is not a leap year")
 
 
