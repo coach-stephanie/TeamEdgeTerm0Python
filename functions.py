@@ -14,6 +14,7 @@
 # -------------------------------------------- 
   # Challenge 1: Let's try to write some basic functions.
 # -------------------------------------------- 
+from calendar import FRIDAY, MONDAY, SATURDAY, SUNDAY, THURSDAY, TUESDAY, WEDNESDAY
 import random
 from urllib.parse import quote
 
@@ -155,9 +156,24 @@ makes_10(10,10)
 
 # -------------------------------------------- 
 
- #def alarm(a,b):
-	
+def alarm(a,b):
+	 
+	if ( a==1 or a==2 or a==3 or a==4 or a==5 ) and b== False: 
+		print("7:00")
+	elif (a==0 or a==6) and b==False:
+		print("10:00")
+	elif (a==0 or a==6) and b==True:
+		print("off")
+	elif (a==1 or a==2 or a==3 or a==4 or a==5 ) and b==True:
+		print("10:00")
 
+	# 0 = "sunday"
+	# 1= "monday"
+	# 2= "tuesday"
+	# 3= "wednesday"
+	# 4= "thursday"
+	# 5= "friday"
+	# 6= "saturday"
 
 
 
@@ -180,10 +196,19 @@ makes_10(10,10)
 # If speed is 81 or more, the result is 2.
 
 # -------------------------------------------- 
+#def speeding_ticket(speed):
+#	result=0
+#if speed=<60
+#	result
+#if speed(61,80)
 
 
+ #	0=no ticket
+#	1=small ticket
+#	2=big ticket
 
 
+#speeding_ticket(40)
 
 
 
