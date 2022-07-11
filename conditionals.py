@@ -12,10 +12,11 @@ print("\n------------------- Challenge 1 -------------------\n")
    # Prompt the user to enter their age.
    # Write conditional statements that print out whether the user is legally allowed to drive in your city. 
 
-
-
-
-
+age = input("Enter your age: 10")
+if age >= 18 and age < 80:
+       print('You can drive')
+else:
+       print('Sorry you cant drive today')
 
 
 
