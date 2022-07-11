@@ -18,9 +18,9 @@ print(message)
 
 print("\n------------------- Challenge 1 -------------------\n")
 
-#print(f"Hi! My name is {name}")
-#print(f"I'm in the {grade}th grade.")
-#print(f"A fun fact about me is that {funFact}")
+print(f"Hi! My name is {Nour}")
+print(f"I'm in the {10}th grade.")
+print(f"A fun fact about me is that {My breakfast was takis}")
 
 
 # **** Challenge 1: Problem 1 ****
@@ -44,7 +44,13 @@ print("\n------------------- Challenge 1 -------------------\n")
 # **** Challenge 1: Problem 3 ****
 # Print out a string that has brackets in it.
 
-
+age = 16
+name='nour'
+print("hello world")
+print(';D')
+print(age)
+print("my age is" , age)
+print(f'My name is {name} and my age is {age}') 
 
 
 # -------------------------------------------- 
@@ -62,11 +68,16 @@ num2 = 10
 # **** Challenge 2: Problem 1 ****
 # Store the sum of num1 and num2 in a variable.
 # Print the sum.
+num1=5+num2=10
+print(sum(5,10))
+
 
 
 # **** Challenge 2: Problem 2 ****
 # Store the difference between sum (above) and 7 in a variable.
 # Print the difference.
+num1=15-num2=7
+print(diff(15,7))
 
 
 # **** Challenge 2: Problem 3 ****
