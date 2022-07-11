@@ -40,40 +40,41 @@ sign = input()
 if sign == "Aries":
    print("The rams of Aries are said to be confident and fiery people. However, they may butt heads with others because they are infamously impatient and honest with their opinions..")
 
-if sign == "Taurus":
+elif sign == "Taurus":
    print("Taurus bulls are said to be loyal and persistent. At the same time, these bulls are often stereotyped as being lazy and, appropriately, bullheaded.")
 
-if sign == "Gemini":
+elif sign == "Gemini":
    print("People rocking the twins are said to be highly intelligent and sociable. On the other hand, they are also said to be superficial and indecisive.")
 
-if sign == "Cancer":
+elif sign == "Cancer":
    print("The crabs of Cancer are said to be charitable people and loyal friends. On the other hand, they also tend to be blunt and are known to get … crabby when someone tries to get them out of their shells")
 
-if sign == "Leo":
+elif sign == "Leo":
    print("Leo lions are said to be proud and brave while sometimes getting a little too arrogant or competitive")
 
-if sign == "Virgo":
+elif sign == "Virgo":
    print("Virgos are said to be diligent and organized. At the same time, Virgos are said to be overly critical perfectionists who tend to worry a lot")
 
-if sign == "Libra":
+elif sign == "Libra":
    print(" Libra is famously the sign of clever extroverts. These social butterflies are also said to be vain and hate making tough decisions.")
 
-if sign == "Scorpio":
+elif sign == "Scorpio":
    print("The scorpions of Scorpio are said to be magnetic thrill-seekers. Scorpios are also often said to be envious and fascinated by the macabre")
 
-if sign == "Sagittarius":
+elif sign == "Sagittarius":
    print("Sagittarians are said to be highly independent adventurers who are always full of imagination. On the flip side, they are also said to be blunt and impatient.")
 
-if sign == "Capricorn":
+elif sign == "Capricorn":
    print("Capricorns are said to be tenacious and pragmatic. At the same time, Capricorns are said to be sticklers for the rules and ferocious when upset.")
 
-if sign == "Aquarius":
+elif sign == "Aquarius":
    print("Aquarians are said to be assertive and creative. Aquarians are also said to be impulsive loners.")
 
-if sign == "Pisces":
+elif sign == "Pisces":
    print("A stereotypical Pisces is said to be an adventurous, compassionate person who may get a little too anxious or needy.")
 
-if (sign != "Aries") and (sign != "Taurus") and (sign != "Gemini") and (sign != "Cancer") and (sign != "Cancer") and (sign != "Leo") and (sign != "Virgo") and (sign != "Libra") and (sign != "Scorpio") and (sign != "Sagittarius") and (sign != "Capricorn") and (sign != "Aquarius") and (sign != "Pisces"):
+#if (sign != "Aries") and (sign != "Taurus") and (sign != "Gemini") and (sign != "Cancer") and (sign != "Cancer") and (sign != "Leo") and (sign != "Virgo") and (sign != "Libra") and (sign != "Scorpio") and (sign != "Sagittarius") and (sign != "Capricorn") and (sign != "Aquarius") and (sign != "Pisces"):
+else:
 	print("Error")
 
 
@@ -181,43 +182,43 @@ if color == "Green":
 
 
 if color == "Blue":
-		print("Blue it is, teller was switched 4 times")
-		answer2 = input("one, two, three, or four?")
-		if answer2 == "one":
-		   print(f"{oneb}")
-		if answer2 == "two":
-		   print(f"{twob}") 
-		if answer2 == "three":
-		   print(f"{threeb}") 
-		if answer2 == "four":
-		   print(f"{fourb}")
+	print("Blue it is, teller was switched 4 times")
+	answer2 = input("one, two, three, or four?")
+	if answer2 == "one":
+		print(f"{oneb}")
+	if answer2 == "two":
+		print(f"{twob}") 
+	if answer2 == "three":
+		print(f"{threeb}") 
+	if answer2 == "four":
+		print(f"{fourb}")
 
 
 if color == "Yellow":
 	print("Yellow it is, teller was switched 6 times")
-answer3 = input("one, two, three, or four?")
-if answer3 == "one":
-	   		print(f"{oney}")
-if answer3 == "two":
-	   		print(f"{twoy}")
-if answer3 == "three":
-	   		print(f"{threey}")
-if answer3 == "four":
-	   		print(f"{foury}")
+	answer3 = input("one, two, three, or four?")
+	if answer3 == "one":
+	   	print(f"{oney}")
+	if answer3 == "two":
+	   	print(f"{twoy}")
+	if answer3 == "three":
+	   	print(f"{threey}")
+	if answer3 == "four":
+		print(f"{foury}")
 
 
 
 if color == "Red":
 	print("Red it is, teller was switched 3 times")
-answer4 = input("one, two, three, or four?")
-if answer4 == "one":
-	   		print(f"{oner}")
-if answer4 == "two":
-	   		print(f"{twor}")
-if answer4 == "three":
-	   		print(f"{threer}")
-if answer4 == "four":
-	   		print(f"{fourr}")
+	answer4 = input("one, two, three, or four?")
+	if answer4 == "one":
+		print(f"{oner}")
+	if answer4 == "two":
+		print(f"{twor}")
+	if answer4 == "three":
+		print(f"{threer}")
+	if answer4 == "four":
+		print(f"{fourr}")
 
 
 
@@ -278,21 +279,4 @@ if answer4 == "four":
 
 	# Select your own theme and use case and modify your code!
 	
-# -------------------------------------------- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# ---------------------

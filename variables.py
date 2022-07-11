@@ -18,9 +18,9 @@ print(message)
 
 print("\n------------------- Challenge 1 -------------------\n")
 
-name = 'Natanael Mota'
+name = "Natanael Mota"
 grade = 9
-funFact = 'I went to the Bahammas'
+funFact = "I went to the Bahammas"
 
 print(f"Hi! My name is {name}")
 print(f"I'm in the {grade}th grade.")

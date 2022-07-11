@@ -5,6 +5,7 @@
 
 from calendar import SUNDAY
 from re import S
+import random
 
 
 message = "\nWelcome to Day 2.\nToday we are learning about conditionals.\nLet's practice writing some conditionals of our own!"
@@ -16,8 +17,8 @@ print("\n------------------- Challenge 1 -------------------\n")
    # Prompt the user to enter their age.
    # Write conditional statements that print out whether the user is legally allowed to drive in your city. 
 
-print('Enter your age:')
-age = input()
+
+age = input('Enter your age:')
 if (age < "18") :
    print("You can't drive")
 
@@ -36,22 +37,22 @@ print("\n------------------- Challenge 2 -------------------\n")
 # Who placed first?
    # Create three variables and assign them random scores. 
    # Write conditional statements that check which is the highest score and prints it.
-import random
 
 
-one = (random.randrange(1,100))
-two = (random.randrange(1,100))
-three = (random.randrange(1,100))
+
+one = random.randrange(1, 100)
+two = random.randrange(1, 100)
+three = random.randrange(1, 100)
 if (one >= two) and  (one >= three):
    print(f"{one} is the highest score")
 
 
 if (two >= one) and  (two >= three):
-   print(f"{one} is the highest score")
+   print(f"{two} is the highest score")
 
 
 if (three >= two) and  (three >= one):
-   print(f"{one} is the highest score")
+   print(f"{three} is the highest score")
 
 
 # -------------------------------------------- 
@@ -77,19 +78,19 @@ temp = 50
 if (weather == "rainy") and (temp >= 60):
    print("Bring an umbrella and a light jacket")
 
-if (weather == "rainy") and (temp < 60):
+elif (weather == "rainy") and (temp < 60):
    print("Bring an umbrella and a warm jacket")
 
-if (weather == "Sunny") and ( temp >= 85):
+elif (weather == "Sunny") and ( temp >= 85):
    print("Wear a hat, sunscreen, light clothes and sunglasses")
 
-if (weather == "Sunny") and ( temp < 85):
+elif (weather == "Sunny") and ( temp < 85):
    print("Wear a hat, and sunglasses")
 
-if (weather == "Snowing") and (temp >= 30) and (temp < 59):
+elif (weather == "Snowing") and (temp >= 30) and (temp < 59):
    print("Wear gloves and a scarf ")
 
-if (weather == "Snowing") and (temp >= -100) and (temp < 5):
+elif (weather == "Snowing") and (temp >= -100) and (temp < 5):
    print("Don't go")
 
 
@@ -136,25 +137,25 @@ day = input()
 if day == "1":
    print("monday")
 
-if day == "2":
+elif day == "2":
    print("tuesday")
 
-if day == "3":
+elif day == "3":
    print("wendsday")
 
-if day == "4":
+elif day == "4":
    print("thursday")
 
-if day == "5":
+elif day == "5":
    print("friday")
 
-if day == "6":
+elif day == "6":
    print("saturday")
 
-if day == "7":
+elif day == "7":
    print("sunday")
 
-if day > "7":
+elif day > "7":
    print("Error")
 
 
@@ -183,6 +184,8 @@ if (year % 4 == 0):
    if (year % 100 == 0):
       if(year % 400 == 0):
          print ("It's a leap year")
+      else:
+         s  print("It's not a leap year")
    else:
       print("It's a leap year")
 else:
