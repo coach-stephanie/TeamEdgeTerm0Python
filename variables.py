@@ -4,8 +4,8 @@
 # -------------------------------------------- 
 
 # Example
-message = "Hello World!"
-print(message)
+#message = "Hello World!"
+#print(message)
 
 # -------------------------------------------- 
 # Challenge 1:
@@ -16,7 +16,7 @@ print(message)
 # (Hint: Remove the # signs in front of the print statements below so your code will run!)
 # -------------------------------------------- 
 
-print("\n------------------- Challenge 1 -------------------\n")
+#print("\n------------------- Challenge 1 -------------------\n")
 
 #print(f"Hi! My name is {name}")
 #print(f"I'm in the {grade}th grade.")
@@ -62,12 +62,13 @@ num2 = 10
 # **** Challenge 2: Problem 1 ****
 # Store the sum of num1 and num2 in a variable.
 # Print the sum.
-
-
+sum1 = (num1 + num2)
+print(sum1)
 # **** Challenge 2: Problem 2 ****
 # Store the difference between sum (above) and 7 in a variable.
 # Print the difference.
-
+sum2 = (sum1 -7)
+print(sum2)
 
 # **** Challenge 2: Problem 3 ****
 # Store the product of the difference and 3 in a variable.
