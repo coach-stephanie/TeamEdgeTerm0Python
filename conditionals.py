@@ -12,16 +12,14 @@ print("\n------------------- Challenge 1 -------------------\n")
    # Prompt the user to enter their age.
    # Write conditional statements that print out whether the user is legally allowed to drive in your city. 
 
-#age = int(input("How old are you? "))
-#if age < 18 or age > 80:
-#   print("You cannot drive")
-
-#else:
-#   print("You can drive")
 
 
+age = int(input("How old are you? "))
+if age < 18 or age > 80:
+  print("You cannot drive")
 
-
+else:
+  print("You can drive")
 
 
 
@@ -38,9 +36,15 @@ print("\n------------------- Challenge 2 -------------------\n")
    # Write conditional statements that check which is the highest score and prints it.
 
 
-
-
-
+first = random.randint(1, 10)
+second = random.randint(1, 10)
+third = random.randint(1, 10)
+if first > second and third:
+   print("The first one is the higher score")
+elif second > first and third:
+   print("The second one is the higher score")
+elif third > first and second:
+   print("The third one is the higher score")
 
 
 
@@ -63,12 +67,16 @@ print("\n------------------- Challenge 3 -------------------\n")
 # Snowing: Wear gloves and a scarf 
 
 # Here's a variable to get you started:
-weather = "rainy"
 
 
+weather = "sunny"
 
-
-
+if weather == "rainy":
+   print("Bring an umbrella")
+elif weather == "sunny":
+   print("Wear a hat and sunglasses")
+elif weather == "snowing":
+   print("Wear gloves and a scarf")
 
 
 
@@ -91,7 +99,23 @@ weather = "rainy"
    # Hint: You will need another variable to keep track of the temperature.
 
 
+weather = "snowing"
+temperature = random.randint(0, 100)
 
+if weather == "rainy" and temperature >= 50:
+   print("Bring an umbrella and wear a light jacket")
+elif weather =="rainy" and temperature < 50:
+   print("Bring an umbrella and wear a warm jacket")
+
+if weather == "sunny" and temperature >= 50:
+   print("Wear a hat and sunglasses, shorts and a T-shirt")
+elif weather =="sunny" and temperature < 50:
+   print("Wear a hat and sunglasses, pants and a T-shirt")
+
+if weather == "snowing" and temperature >= 50:
+   print("Wear gloves and a scarf and light clothes")
+elif weather =="snowing" and temperature < 50:
+   print("Bring an umbrella and wear a warm clothes")
 
 
 
@@ -111,7 +135,23 @@ print("\n------------------- Challenge 4 -------------------\n")
 # Make sure to add a statement that accounts for any numbers out of range! 
 
 
-
+dayWeek = int(input("Enter a number from 1 - 7, where 1 represents monday, 2 tuesday and so on \n"))
+if dayWeek == 1:
+   print("Its Monday!")
+elif dayWeek == 2:
+   print("Its Tuesday!")
+elif dayWeek == 3:
+   print("Its Wednesday!")
+elif dayWeek == 4:
+   print("Its Thursday!")
+elif dayWeek == 5:
+   print("Its Friday!")
+elif dayWeek == 6:
+   print("Its Saturday!")
+elif dayWeek == 7:
+   print("Its Sunday!")
+else:
+   dayWeek = int(input("Please enter another number"))
 
 
 
