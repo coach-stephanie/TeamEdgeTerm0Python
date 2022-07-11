@@ -14,6 +14,9 @@
 # -------------------------------------------- 
   # Challenge 1: Let's try to write some basic functions.
 # -------------------------------------------- 
+import random
+from urllib.parse import quote
+
 
 print("\n------------------- Challenge 1 -------------------\n")
 
@@ -43,10 +46,10 @@ def get_user_input():
 	
 	num=input("do you want to print your message one time or five times")
 	
-	if num == 1:
+	if num == "1":
 		print_message()
 
-	if num == 5:
+	elif num == "5":
 		print_fivemessages()
 
 
@@ -54,17 +57,22 @@ def get_user_input():
 # Write a function called print_greeting() that prints a greeting message to the user.
 def print_greeting(greeting_message):
 	print(f"dear bobby,{greeting_message}")
-greeting_message=("hello")
+print_greeting("hello")
 
 # **** Challenge 1: Problem 5 ****
 # Write a function called print_closing() that prints a goodbye message to the user.
-def print_closing()
-    pri
+def print_closing(goodbye_message):
+    print(f"dear bobby,{goodbye_message}")
+print_closing("goodbye")
 
 # **** Challenge 1: Problem 6 ****
 # Write a function called run() that greets the user, asks them for input, and sends a goodbye message.
 # Remember! Use the functions that you've already made. Don't hardcode anything!
-
+def run():
+	get_user_input()
+	print_greeting("hi mom")
+	print_closing("bye kid")
+run()
 
 
 # -------------------------------------------- 
@@ -87,9 +95,17 @@ print("\n------------------- Challenge 2 -------------------\n")
 		# sum_double(2, 2) → 8
 
 # -------------------------------------------- 
+def sum_double(num1,num2):
+	
+	sum_double = num1 + num2
+	
 
+	if num1 == num2:
+		sum_double = sum_double * sum_double
+	return sum_double
 
-
+sd = sum_double(1,5)
+print(sd)
 
 
 
@@ -109,7 +125,12 @@ print("\n------------------- Challenge 2 -------------------\n")
 
 # -------------------------------------------- 
 
-
+def makes_10(a,b):
+	if a==10 or b==10 or a+b==10:
+		return True
+	else:
+			return False
+makes_10(10,10)
 
 
 
@@ -134,7 +155,8 @@ print("\n------------------- Challenge 2 -------------------\n")
 
 # -------------------------------------------- 
 
-
+ #def alarm(a,b):
+	
 
 
 
