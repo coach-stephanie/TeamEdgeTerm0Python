@@ -39,15 +39,15 @@ print("\n------------------- Challenge 2 -------------------\n")
    # Write conditional statements that check which is the highest score and prints it.
     
 
-   var1 =random.randrange(1,10)
-   var2 = random.randrange(1,10)
-   var3=  random.randrange(1,10)
+var1 =random.randrange(1,10)
+var2 = random.randrange(1,10)
+var3=  random.randrange(1,10)
    
 
 if var1>var2  and var1>var3: 
     print("1 wins!")
 
-elif var2>var1 and var2>var3
+elif var2>var1 and var2>var3:
     print("2 wins")
 
 
@@ -175,7 +175,7 @@ if year%4==0:
       else: 
          print("this is not a leap year  ")
    else:
-      print("this is not a leap year
+      print("this is not a leap year")
 
 
 
