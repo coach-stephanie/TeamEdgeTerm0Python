@@ -20,16 +20,17 @@ print("\n------------------- Challenge 1 -------------------\n")
 # **** Challenge 1: Problem 1 ****
 # Write a function called print_message() that prints any message you want.
 
-print("Hello")
+	print_message ()
 
 # **** Challenge 1: Problem 2 ****
 # Write a function called print_five_messages() that calls print_message() five times.
+def print_fivemessages():
+	print("Hi")
+	print("Hi")
+	print("Hi")
+	print("Hi")
+	print("Hi")
 
-print("Hello")
-print("Hello")
-print("Hello")
-print("Hello")
-print("Hello")
 # **** Challenge 1: Problem 3 ****
 # Write a function called get_user_input() that asks the user if they'd like to print your message
 # once or five times. Then call one of the two functions above based on what the user decides.
@@ -38,16 +39,19 @@ print("Hello")
 # **** Challenge 1: Problem 4 ****
 # Write a function called print_greeting() that prints a greeting message to the user.
 
+def print_greeting():
 
 # **** Challenge 1: Problem 5 ****
 # Write a function called print_closing() that prints a goodbye message to the user.
 
+def print_closing():
+	print("peace")
 
 # **** Challenge 1: Problem 6 ****
 # Write a function called run() that greets the user, asks them for input, and sends a goodbye message.
 # Remember! Use the functions that you've already made. Don't hardcode anything!
 
-
+def run
 
 # -------------------------------------------- 
 
@@ -70,7 +74,7 @@ print("\n------------------- Challenge 2 -------------------\n")
 
 # -------------------------------------------- 
 
-
+# sum_double(5, 3) -> 8
 
 
 
