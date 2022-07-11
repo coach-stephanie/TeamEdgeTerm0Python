@@ -1,4 +1,4 @@
-
+import random
 # -------------------------------------------- 
 # Day 2 Challenges
 # -------------------------------------------- 
@@ -77,7 +77,6 @@ rainy = 'and bring an umbrella with you.'
 sunny = 'and bring a hat, and sunglasses.'
 snowing = 'and bring gloves, and your scarf.'
 
-import random
 weather = random.randint(1 , 3)
 temperature = random.randint(30 , 100)
 if weather == 1:

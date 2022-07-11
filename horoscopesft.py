@@ -43,3 +43,5 @@ elif uzs == 'Pisces':
     print(ans)
 else:
     print('Invalid Value')
+
+#Lol, I'm Being lazy rn :p
