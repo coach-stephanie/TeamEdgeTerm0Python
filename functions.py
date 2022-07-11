@@ -19,24 +19,47 @@ print("\n------------------- Challenge 1 -------------------\n")
 
 # **** Challenge 1: Problem 1 ****
 # Write a function called print_message() that prints any message you want.
-
+def print_message():
+	print("hi")
+	
+print_message()
 
 # **** Challenge 1: Problem 2 ****
 # Write a function called print_five_messages() that calls print_message() five times.
+def print_fivemessages():
+	print("hi")
+	print("hi")
+	print("hi")
+	print("hi")
+	print("hi")
+	
+print_fivemessages()
 
 
 # **** Challenge 1: Problem 3 ****
 # Write a function called get_user_input() that asks the user if they'd like to print your message
 # once or five times. Then call one of the two functions above based on what the user decides.
+def get_user_input():
+	
+	num=input("do you want to print your message one time or five times")
+	
+	if num == 1:
+		print_message()
+
+	if num == 5:
+		print_fivemessages()
 
 
 # **** Challenge 1: Problem 4 ****
 # Write a function called print_greeting() that prints a greeting message to the user.
-
+def print_greeting(greeting_message):
+	print(f"dear bobby,{greeting_message}")
+greeting_message=("hello")
 
 # **** Challenge 1: Problem 5 ****
 # Write a function called print_closing() that prints a goodbye message to the user.
-
+def print_closing()
+    pri
 
 # **** Challenge 1: Problem 6 ****
 # Write a function called run() that greets the user, asks them for input, and sends a goodbye message.
