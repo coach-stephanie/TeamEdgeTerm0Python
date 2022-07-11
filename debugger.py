@@ -17,6 +17,8 @@ while True:
         print("You Lose!")
     elif((userInput == "rock" and computerSelection == "scissors") or (userInput == "paper" and computerSelection == "rock") or (userInput == "scissor" and computerSelection == "paper")):
         print("You Win!")
+    else:
+        print("error, start playing")
 
 
 #console.log?
