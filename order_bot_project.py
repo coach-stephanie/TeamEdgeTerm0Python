@@ -42,8 +42,23 @@
 
 # --------------------------------------------
 
+Burger = 3.00 
+Fries = 2.75
+Cheesburger = 3.75
 
+Water = 1.50
+Juice = 1.75
+Soda = 2.00
 
+IceCream = 2.50
+Scone = 3.75
+Cake = 4.00
+
+userdrink = 0.00 
+userfood  = 0.00
+userdessert = 0.00
+
+#Tax = price_total % 8.875
 # -------------------------------------------- 
 
 # Part 2:
@@ -54,11 +69,23 @@
 
 # --------------------------------------------
 
+def display_menu():
+	print("Welcome to the secret store. We got food. May or may not be edible. Eat at your own discretion \n")
+	print("Take a look at what we have here \n")
+	print("----------------Meals-------------")
+	print("1. Burgers: $3.00 \n")
+	print("2. Fries: $2.50 \n")
+	print("3. Cheesburger: $3.50 \n")
+	print("--------------Drinks----------- \n")
+	print("4. Water: $1.50 \n")
+	print("5. Juice: $1.50 \n")
+	print("6. Soda: $2.00 \n")
+	print("----------------Dessert------------ \n")
+	print("7. IceCream: $1.50 \n")
+	print("8. Scones: $3.00 \n")
+	print("9. Cake: $4.00 \n")
 
-
-
-
-
+display_menu()
 # -------------------------------------------- 
 
 # Part 3:
@@ -71,16 +98,55 @@
 # Remember! Functions are meant to be reusable, so write a function that will work when called repeatedly!
 
 # --------------------------------------------
+def drink():
+	global userdrink
+
+	drink = int(input("Drink bud? What do you want? Choose 4-6 or any other number if you arent thirsty \n"))
+	if drink == 4:
+		print("Water? Ok. \n") 
+		userdrink = 1.50
+	elif drink == 5:
+		print("Juice? No problem \n")
+		userdrink = 1.75	
+	elif drink == 6:
+		print("Soda? Alright \n")
+		userdrink = 2.00
+	else:
+		print("No Bev??? Crazy")
+drink()
 
 
+def food():
+	global userfood
+	food = int(input("And what do you need to eat? Use 1-3 to choose and use other numbers for nothing\n"))
+	if food == 1:
+		print("Burger! Nice... \n")
+		userfood = 3.00
+	elif food == 2:
+		print("Fries. Gotcha \n")
+		userfood = 2.75
+	elif food == 3:
+		print("Cheesburger. No problem. \n")
+		userfood = 3.75
+	else:
+		print("Then why are you...nevermind")
+food()
 
-
-
-
-
-
-
-
+def dessert():
+	
+	dessert = int(input("Do you want some dessert? Choose 7-9 or press any other number for nothing \n"))
+	if dessert == 7:
+		print("IceCream. We only have vanilla smh... \n")
+		userdessert = 2.50
+	elif dessert == 8:
+		print("Scones. Alright \n")
+		userdessert = 3.75
+	elif dessert == 9:
+		print("Cake. We only have chocolate. \n")
+		userdessert = 4.00
+	else:
+		print("No dessert? Okay \n")
+dessert()
 
 
 # -------------------------------------------- 
@@ -96,9 +162,21 @@
 # Remember! Functions are meant to be reusable, so write a function that will work when called for each person!
 
 # -------------------------------------------- 
+final = input("will that be all? Y/N \n")
+if final == "Y":
+	print("Cool, here is the total \n ")
 
 
+if final == "N":
+	print("Too bad, here is your total: \n")
 
+
+print("-------Total-----\n")
+print(f"Drink: ${userdrink}")
+print(f"Food: ${userfood}")
+print(f"Dessert: ${userdessert} \n")
+
+print("--------Receipt------")
 
 
 
@@ -121,11 +199,24 @@
 # - Tip for the order
 # - Total cost for the order
 
-
+subtotal = userdrink + userfood + userdessert
 # -------------------------------------------- 
+Tax = 0.08875
+total = (subtotal*Tax) + (subtotal)
+
+def receipt():
+	print(f"Drink: ${userdrink}")
+	print(f"Food: ${userfood}")
+	print(f"Dessert: ${userdessert} \n")
+	print(f"Subtotal: ${subtotal}")
+	print(f"Tax: 0.08875")
+	
 
 
 
+
+	print(f"Total: {total}")
+receipt()
 
 # -------------------------------------------- 
 
