@@ -39,9 +39,139 @@
 # as well as TAX and tip
 
 # Remember: Your user should be able to order at least 3 items (a drink, meal, and dessert item). 
-
+#DRINK EAT DESSERT
 # --------------------------------------------
+print("\t MENU ")
+print("---------------------- \n")
 
+print("Drinks:")
+print("-------- \n")
+print("1. Coke \t $02.00")
+print("2. Pepsi \t $02.00\n")
+
+
+print("Meals:  ")
+print("-------- \n")
+print("3. Hamburguer \t $06.00")
+print("4. Hot dog \t $03.00")
+print("5. Sushi \t $04.00\n")
+
+
+print("Desserts:  ")
+print("-------- \n")
+print("6. Cake \t $03.50")
+print("7. Flan \t $04.00\n")
+
+print("Hi! Welcome to Steven's Shop :D")
+
+user_drink = ""
+user_meal = ""
+user_dessert = ""
+
+#START OF DRINK
+def drink_ouput():
+	#price1_2 = 2
+	global user_drink
+	drink = int(input("What whould you like to drink? (Enter 1 or 2)"))
+	if drink == 1:
+		price1_2 = 2.0
+		user_drink = "Coke - $02.00"
+		return price1_2
+	if drink == 2:
+		price1_2 = 2.0
+		user_drink = "Pepsi - $02.00"
+		return price1_2
+#drink_ouput()
+#END OF DRINK
+
+
+
+#MEAL STARTS HERE
+def meal_output():
+	#price3 = 6.0
+	# price4 = 3.0
+	# price5 = 4.0
+	global user_meal
+	meal = int(input("What whould you like to eat? (Enter 3, 4 or 5)"))
+	if meal == 3:
+		price3 = 6.0
+		user_meal = "Hamburger - $06.00"
+		return price3
+	elif meal == 4:
+		price4 = 3.0
+		user_meal = "Hot dog - $03.00"
+		return price4
+	elif meal == 5:
+		price5 = 4.0
+		user_meal = "Sushi - $04.00"
+		return price5
+
+#meal_output()
+#MEAL ENDS HERE
+
+
+#START OF DESSERT
+def dessert_output():
+	# price6 = 3.5
+	# price7 = 4.0
+	global user_dessert
+	dessert = int(input("What whould you like to drink? (Enter 6 or 7)"))
+	if dessert == 6:
+		price6 = 3.5
+		user_dessert = "Cake - $03.50"
+		return price6
+	elif dessert == 7:
+		price7 = 4.0
+		user_dessert = "Flan - $04.00"
+		return price7
+#dessert_output()
+#END OF DESSERT
+
+
+
+cost = drink_ouput() + meal_output() + dessert_output()
+taxes_cost = cost*0.08875
+total_cost = cost + taxes_cost
+
+print("your order total with tax is: ")
+print(total_cost)
+
+
+#HERE STARTS COSTUMERS TIP
+def tip():
+	costumers_tip = input("Would you like to leave a tip? (10%, 15%, 20%, 22%):  ")
+	if costumers_tip=="10%":
+		consumer_tip = total_cost*0.1
+		return str(consumer_tip)
+	elif costumers_tip=="15%":
+		consumer_tip = total_cost*0.5
+		return str(consumer_tip)
+	elif costumers_tip=="20%":
+		consumer_tip = total_cost*0.2
+		return str(consumer_tip)
+	elif costumers_tip=="22%":
+		consumer_tip = total_cost*0.22
+		return str(consumer_tip)
+	elif costumers_tip=="0" or costumers_tip=="zero" or costumers_tip=="0%":
+		return 0.0
+#tip()
+# COSTUMERS TIP END 
+
+users_tip = str(tip())
+
+# START OF RECEIPT
+
+#Final_cost = total_cost + users_tip
+print("Thanks! This is your receipt:")
+
+print(user_drink )
+print(user_meal )
+print(user_dessert )
+print("Subtotal: $", str(cost))
+print("Tax: $0.08875")
+print("Tip: $" + users_tip)
+print("Total: $", str(total_cost))
+print("Come again soon!")
 
 
 # -------------------------------------------- 

@@ -29,7 +29,8 @@ print(f"A fun fact about me is that {funFact}")
 # **** Challenge 1: Problem 1 ****
 # Initialize the variables used in the {} with your data for the three statements above! 
 # Hint: Also think about where you would initialize those variables
-
+ 
+#---------DONE--
 
 # **** Upchallenge! ****
 # Can you also print out the data type of the variables? 
@@ -73,7 +74,15 @@ print(result)
 # Store the difference between sum (above) and 7 in a variable.
 # Print the difference.
 
-
+person = input("What's your name \n")
+if person != "":
+    print("Hello" + person + "!")
+    feeling = input ("How are you")
+    if feeling == "good" or "Good":
+        print("Happy to hear thaat")
+    else:
+        print("Happy to hear that")
+print("Goodbye now")
 # **** Challenge 2: Problem 3 ****
 # Store the product of the difference and 3 in a variable.
 # Print the product.
