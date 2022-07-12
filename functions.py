@@ -20,7 +20,8 @@ print("\n------------------- Challenge 1 -------------------\n")
 # **** Challenge 1: Problem 1 ****
 # Write a function called print_message() that prints any message you want.
 
-	print_message ()
+def print_message():
+	print("Hi")
 
 # **** Challenge 1: Problem 2 ****
 # Write a function called print_five_messages() that calls print_message() five times.
@@ -35,11 +36,20 @@ def print_fivemessages():
 # Write a function called get_user_input() that asks the user if they'd like to print your message
 # once or five times. Then call one of the two functions above based on what the user decides.
 
+def  get_user_input():
+
+	num=input("do you want to print your message? Enter 1 or 5 ")
+
+	if num == "1":
+		print_message()
+	elif num == "5":
+		print_fivemessages()
 
 # **** Challenge 1: Problem 4 ****
 # Write a function called print_greeting() that prints a greeting message to the user.
 
 def print_greeting():
+	print("hey")
 
 # **** Challenge 1: Problem 5 ****
 # Write a function called print_closing() that prints a goodbye message to the user.
@@ -50,9 +60,11 @@ def print_closing():
 # **** Challenge 1: Problem 6 ****
 # Write a function called run() that greets the user, asks them for input, and sends a goodbye message.
 # Remember! Use the functions that you've already made. Don't hardcode anything!
-
-def run
-
+def run():
+	print_greeting()
+	get_user_input()
+	print_closing()
+run()
 # -------------------------------------------- 
 
 # Challenge 2: Functions are also able to take input and return output. 
@@ -76,8 +88,16 @@ print("\n------------------- Challenge 2 -------------------\n")
 
 # sum_double(5, 3) -> 8
 
+def sum_double(apples, pears):
+	if apples == pears:
+		return (apples + pears) * 2
+	else:
+		return (apples + pears)
 
 
+
+sd = sum_double(2,2)
+print(sd)
 
 
 # Make sure to test your code! Write a few function calls to make sure your code works!
@@ -149,7 +169,4 @@ print("\n------------------- Challenge 2 -------------------\n")
 
 
 
-
-
-
-# Make sure to test your code! Write a few function calls to make sure your code works!
+# Make sure to test your code! Write a few function calls to make sure your code work
