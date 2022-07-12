@@ -41,8 +41,23 @@
 # Remember: Your user should be able to order at least 3 items (a drink, meal, and dessert item). 
 
 # --------------------------------------------
+BurgerP = "Burger - 10.00"
+CheeseBurgerP = "CheeseBurger - 12.50 " 
+FriesP = "Fries - 2.50"  
+JuiceP = "Juice - 2.00" 
+SodaP = "Soda - 2.25"  
+CookieP = "Cookie - 1.00" 
+MuffinP = "Muffin - 2.50"
+CakeP = "cake - 3.00"
 
-
+BurgerPN = 10.00
+CheeseBurgerPN = 12.50  
+FriesPN = 2.50  
+JuicePN = 2.00 
+SodaPN = 2.25 
+CookiePN = 1.00
+MuffinPN = 2.50
+CakePN = 3.00
 
 # -------------------------------------------- 
 
@@ -53,6 +68,9 @@
 # - Print each item available and it's cost. You should have at least 3 items available (a drink, meal, and dessert item). 
 
 # --------------------------------------------
+
+menu = "Menu \n\n\n Plates \n Burger - 10.00 \n Cheese Burger - 12.50 \n Fries - 2.50 \n\n\n Drinks \n Juice - 2.00 \n Soda - 2.25 \n\n\n Desert \n Cookie - 1.00 \n Muffin - 2.50 \n Cake - 3.00"
+print(menu.lower())
 
 
 
@@ -71,6 +89,104 @@
 # Remember! Functions are meant to be reusable, so write a function that will work when called repeatedly!
 
 # --------------------------------------------
+
+
+
+
+def order1():
+	global recipt 
+	global price1 
+	order = input("Hello, what would you like from our plates?").lower()
+	if order == "burger": 
+		recipt = BurgerP
+		price1 = BurgerPN
+		order2()
+	elif order == "cheese burger":
+		recipt = CheeseBurgerP
+		price1 = CheeseBurgerPN
+		order2()
+	elif order == "fries":
+		recipt = FriesP
+		price1 = FriesPN
+		order2()
+		
+	else:
+		print("Escuse me, can you repeat")
+		order1()
+	
+
+def order2():
+	global recipt2 
+	global price2	
+	ordert = input("Hello, what would you like from our drinks?").lower()
+	if ordert == "juice":
+		recipt2 = JuiceP
+		price2 = JuicePN
+		order3t()
+	elif ordert == "soda":
+		recipt2 = SodaP
+		price2 = SodaPN
+		order3t()
+	else:
+		print("Heh?")
+		order2()
+
+
+	
+def order3t():
+	order3 = input("Hello, what would you like from our deserts?").lower()
+	if order3 == "cookie":
+		reciptf = (f"{recipt} \n {recipt2} \n {CookieP}")
+		pricet = price1 + price2 + CookiePN
+		print (reciptf)
+		print (f"Without tax {pricet}")
+		pricewt = round(pricet * 1.08875, 2)
+		print (f"With Tax {pricewt}")
+		tip = int(input("How many dollars for tip?"))
+		Finalp = tip + pricewt
+		print("Here is you recipt")
+		print (reciptf)
+		print (f"Without tax {pricet}")
+		print (f"With Tax {pricewt}")
+		print (f"Final price: {Finalp}")
+	elif order3 == "muffin" :
+		reciptf = (f"{recipt} \n {recipt2} \n {MuffinP}")
+		pricet = price1 + price2 + MuffinPN
+		print (reciptf)
+		print (f"Without tax {pricet}")
+		pricewt = round(pricet * 1.08875, 2)
+		print (f"With Tax {pricewt}")
+		tip = int(input("How many dollars for tip?"))
+		print("Here is you recipt")
+		Finalp = tip + pricewt
+		print (reciptf)
+		print (f"Without tax {pricet}")
+		print (f"With Tax {pricewt}")
+		print (f"Final price: {Finalp}")
+	elif order3 == "cake":
+		reciptf = (f"{recipt} \n {recipt2} \n {CakeP}")
+		pricet = price1 + price2 + CakePN
+		print (reciptf)
+		print (f" With no tax {pricet}")
+		pricewt = round(pricet * 1.08875, 2)
+		print (f"With Tax {pricewt}")
+		tip = float(input("How many dollars for tip?"))
+		print("Here is you recipt")
+		print (reciptf)
+		print (f" With no tax {pricet}")
+		print (f"With Tax {pricewt}")
+		Finalp = tip + pricewt
+		print (f"Final price: {Finalp}")
+	else:
+		print("Say what?")
+		order3t()
+	
+
+
+order1()
+		
+		
+		
 
 
 
