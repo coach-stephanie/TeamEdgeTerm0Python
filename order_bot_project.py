@@ -41,9 +41,118 @@
 # Remember: Your user should be able to order at least 3 items (a drink, meal, and dessert item). 
 
 # --------------------------------------------
+# Chipotle pt.2
+
+from pickle import TRUE
 
 
+user_drink=""
+user_meal=""
+user_dessert=""
+total_mealcost=0
+tax_meal=""
+tip=""
+def print_drinkmessage():
+	print("You have selected a drink")
+	
 
+
+name1 = input("Enter name : ")
+print(f"Hello {name1} what would you like to order? Please order  a drink")
+
+def get_user_drinkinput():
+	global total_mealcost
+	global select_drink
+	select_drink=int(input("Enter your drink. The options are Fanta(1), Water(2), or a Sprite(3)"))
+	
+	if select_drink == (1) or (2) or (3):
+		print_drinkmessage()
+		if select_drink == (1) or (3):
+			total_mealcost = total_mealcost + 1.50
+			
+		elif select_drink == (2):
+			total_mealcost = total_mealcost + 1.00
+			
+
+get_user_drinkinput()
+
+print(f"Currently, the total meal cost is {total_mealcost}")
+
+
+def get_user_mealinput():
+	global total_mealcost
+	global select_meal
+	select_meal =input("Enter your drink. The options are Beef Burrito(4), Chicken Taco(5), or a Quesedilla(6)")
+	
+	if select_meal == (4) or (5) or (6):
+		print("You have selected a meal")
+		if select_meal == (5) or (6):
+			total_mealcost = total_mealcost + 6.00
+			
+		elif select_meal == (4):
+			total_mealcost = total_mealcost + 9.00
+			
+
+get_user_mealinput()
+
+print(f"Currently, the total meal cost is {total_mealcost}")
+
+def get_user_dessertinput():
+	global total_mealcost
+	global select_dessert
+	select_dessert=input("Enter your dessert. The options are Tres leches(7), Chocolate Popsicle(8)")
+	 
+	if select_dessert == (7) or (8):
+		print("You have selected a dessert")
+		if select_dessert == (7) or (8):
+			total_mealcost = total_mealcost + 3.00
+			
+		
+
+
+get_user_dessertinput()
+
+print(f"Currently, the total meal cost is {total_mealcost}")
+tax_meal= total_mealcost ** 0.0875
+total_mealcost = total_mealcost + tax_meal 
+print(f"your order total with tax is: {total_mealcost}")
+tip = input("Would you like to leave a tip? Yes or No? ")
+if tip=="Yes":
+	tip1 = float(input("Enter tip percentage as a decimal: "))
+	tip1 = total_mealcost ** tip1
+	total_mealcost= total_mealcost + tip1
+	print(round(total_mealcost,2))
+
+
+else:
+	total_mealcost 
+	print(round(total_mealcost,2))
+
+
+print("Thanks! This is your receipt:")
+
+if select_drink == 1:
+		print("Fanta = $1.50")
+elif select_drink == 2:
+		print("Water = $1.00")
+elif select_drink == 3:
+		print("Sprite = $1.50")
+print(select_meal)
+print(int(select_meal) == int(4))
+if select_meal == 4:
+		print("Beef Burrito = $1.50")
+elif select_meal == 5:
+		print("Chicken Taco = $1.00")
+elif select_meal == 6:
+		print("Quesidilla = $1.50")
+		#if select_drink == (1) or (3):
+			#total_mealcost = total_mealcost + 1.50
+			
+		#elif select_drink == (2):
+		#	total_mealcost = total_mealcost + 1.00
+			
+#print(select_meal)
+#print(select_dessert)
 # -------------------------------------------- 
 
 # Part 2:
