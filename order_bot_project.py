@@ -115,7 +115,7 @@ def dessert_output():
 	# price6 = 3.5
 	# price7 = 4.0
 	global user_dessert
-	dessert = int(input("What whould you like to drink? (Enter 6 or 7)"))
+	dessert = int(input("What whould you like for dessert? (Enter 6 or 7)"))
 	if dessert == 6:
 		price6 = 3.5
 		user_dessert = "Cake - $03.50"
@@ -171,7 +171,7 @@ print("Subtotal: $", str(cost))
 print("Tax: $0.08875")
 print("Tip: $" + users_tip)
 print("Total: $", str(total_cost))
-print("Come again soon!")
+print("\n Come again soon!")
 
 
 # -------------------------------------------- 
