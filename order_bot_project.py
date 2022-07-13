@@ -1,3 +1,4 @@
+
 # -------------------------------------------- 
 
 	# You've just learned about variables, conditionals, functions, and user input. 
@@ -83,29 +84,29 @@ food_price4 = 0
 
 print("MENU")
 print("Drinks")
-print("_ _ _ _ _")
+print("♡~~~~~~~~~~♡")
 
-print("1. Matcha Boba Milk Tea $5.25")
-print("2. Strawberry Boba Milk $5.25")
-print("3. Brown Sugar Boba Milk $5.05")
-print("4. Taro Boba Milk Tea $5.25")
+print("1. Matcha Boba Milk Tea 🧋 $5.25")
+print("2. Strawberry Boba Milk 🧋 $5.25")
+print("3. Brown Sugar Boba Milk 🧋 $5.05")
+print("4. Taro Boba Milk Tea 🧋 $5.25")
 print("Meals")
-print("_ _ _ _ _")
-print("6. California Rolls $4.15")
-print("7. Tuna Nigiri $4.10")
-print("8. Shrimp Onigiri $4.30")
-print("9. Orange Chicken $3.45")
-print("10. Rice $3.40")
-print("11. Black Bean Noodles $4.10")
+print("♡~~~~~~~~~~♡")
+print("6. California Rolls 🍣 $4.15")
+print("7. Tuna Nigiri 🍣 $4.10")
+print("8. Shrimp Onigiri 🍙 $4.30")
+print("9. Orange Chicken 🍗 $3.45")
+print("10. Rice 🍚 $3.40")
+print("11. Black Bean Noodles 🍜 $4.10")
 print("Desserts")
-print("_ _ _ _ _")
-print("12. Rainbow Crepe Cake Slice $5.99")
-print("13. Chocolate Filled Churro $4.25")
-print("14. Strawberry  Shortcake Slice $5.99")
-print("15.  Macarons $4.25")
-print("16. Ice Cream $3.05")
+print("♡~~~~~~~~~~♡")
+print("13. Rainbow Crepe Cake Slice 🍰 $5.99")
+print("14. Chocolate Filled Churro $4.25")
+print("15. Strawberry  Shortcake Slice 🍰 $5.99")
+print("16.  Macarons $4.25 🍪")
+print("17. Ice Cream $3.05 🍦")
 
-print("Hi! Welcome to Maya's Bubbling Boba.")
+print("Hi! Welcome to Maya's Bubbling Boba~💜")
 
 
 
@@ -125,17 +126,17 @@ print("Hi! Welcome to Maya's Bubbling Boba.")
 
 drink = int(input("What drink would you like to order? (Pick  1-4. If you don't wan't anything from here, type 5)"))
 if drink == 1:
-		print("You picked Matcha Boba Milk Tea! Matcha slayss!")
+		print("You picked Matcha Boba Milk Tea! Matcha slayss! 😌")
 elif drink == 2:
-		print("You picked Strawberry Boba Milk! Yumm!")
+		print("You picked Strawberry Boba Milk! Yum! 😋")
 elif drink == 3:
-		print("You picked Brown Sugar Boba Milk! I LOVE that flavor!")
+		print("You picked Brown Sugar Boba Milk! I LOVE that flavor! 💕")
 elif drink == 4:
-		print("You picked Taro Boba Milk Tea! Good choice!")
+		print("You picked Taro Boba Milk Tea! Good choice! 😚")
 elif drink == 5:
-		print("No drink? That's okay!")
+		print("No drink? That's okay! 👍")
 else:
-	print("I need a number!")
+	print("I need a number! 😶")
 
 if drink == 1:
 	drink_price = food_price + 5.25
@@ -146,25 +147,26 @@ elif drink == 3:
 elif drink == 4:
 	drink_price = food_price + 5.25
 elif drink == 5:
-	drink_price = food_price + 0
+	drink_price = food_price + 0.00
+
 
 meal = int(input("What meal would you like to order? (Pick 6-11! If you don't want anything from here, type 12)"))
 if meal == 6:
-	print("You picked California Rolls! My favorite!")
+	print("You picked California Rolls! My favorite! 💖")
 elif meal == 7:
-	print("You picked Tuna Nigiri! I need to try that someday!")
+	print("You picked Tuna Nigiri! I need to try that someday! 🥰")
 elif meal == 8:
-	print("You picked Shrimp Onigiri! I'm OBSESSED with shrimp!")
+	print("You picked Shrimp Onigiri! I'm OBSESSED with shrimp! 😍")
 elif meal == 9:
-	print("You picked Orange Chicken! My dad's favorite!")
+	print("You picked Orange Chicken! My dad's favorite! 👌")
 elif meal == 10:
-	print("You picked Rice! Just plain rice? You do you hehe.")
+	print("You picked Rice! Just plain rice? You do you hehe. 😌")
 elif meal == 11:
-	print("You picked Black Bean Noodles! They're pretty messy, but its worth the purchase!")
+	print("You picked Black Bean Noodles! They're pretty messy, but its worth the purchase! 🤭")
 elif meal == 12:
-	print("No meal? That's okay!")
+	print("No meal? That's okay! 👍")
 else:
-	print("I need a number!")
+	print("I need a number! 😶")
 
 if meal == 6:
 	food_price2 = food_price + 4.15
@@ -183,19 +185,19 @@ elif meal == 12:
 
 dessert = int(input("What dessert would you like to order? Hope you have room for it! (Pick 13-17! If you don't want anything from here, type 18)"))
 if dessert == 13:
-	print("You picked Rainbow Crepe Cake slice! I've been wanting to try one!")
+	print("You picked Rainbow Crepe Cake slice! I've been wanting to try one! 😚")
 elif dessert == 14:
-	print ("You picked Chocolate Filled Churro! Churros outsold all these desserts ngl")
+	print ("You picked Chocolate Filled Churro! Churros outsold all these desserts ngl 🤩")
 elif dessert == 15:
-	print("You picked Strawberry Shortcake slice! That show was my entire personality when I was like 6")
+	print("You picked Strawberry Shortcake slice! Yumm 😍")
 elif dessert == 16:
-	print("You picked Macarons! Oui oui")
+	print("You picked Macarons! Oui oui 😎")
 elif dessert == 17:
-	print("You picked Ice cream! A classic~")
+	print("You picked Ice cream! A classic~ 😙")
 elif dessert == 18:
-	print("You don't want dessert? That's fine!")
+	print("You don't want dessert? That's fine! 👍")
 else:
-	print("I need a number")
+	print("I need a number 😶")
 
 if dessert == 13:
 	food_price3 = food_price + 5.99
@@ -209,7 +211,7 @@ elif dessert == 17:
 	food_price3 = food_price + 3.05
 elif dessert == 18:
 	food_price3 = food_price + 0
-
+	
 food_price4 = food_price4 + drink_price + food_price2 + food_price3
 
 
@@ -230,20 +232,22 @@ food_price4 = food_price4 + drink_price + food_price2 + food_price3
 # Remember! Functions are meant to be reusable, so write a function that will work when called for each person!
 
 # -------------------------------------------- 
-food_price4 = food_price4 * 0.0875
+food_price4 = (round(food_price4 * 0.087) + food_price4) 
 print(f"Your total price is {food_price4}")
-tip = input("Would you like to add a tip?")
+tip = input("Would you like to add a tip? 😚")
 if tip == "yes":
-	tip = input("Okay! Would you like to tip 15%, 20%, or 35%?")
-	if tip == "15%":
-		food_price4 = food_price4 * 0.15
-	elif tip == "20%":
-		food_price4 = food_price4 * 0.20
-	elif tip == "35%":
-		food_price4 = food_price4 * 0.35
+	tip = input("Okay! Would you like to tip 15%, 20%, or 35%? 🤗")
+	if tip == "15%" or "15":
+		food_price4 = (round(food_price4 * 0.15) + food_price4)
+	elif tip == "20%" or "20":
+		food_price4 = (round(food_price4 * 0.20) + food_price4)
+	elif tip == "35%" or "35":
+		food_price4 = (round(food_price4 * 0.35) + food_price4)
+	else:
+		print("Just pick these prices! 😊")
 
 elif tip == "no":
-	print("Alright! Here's your reciept")
+	print("Alright! Here's your reciept 😘")
 
 
 
@@ -273,11 +277,24 @@ elif tip == "no":
 
 # -------------------------------------------- 
 
-print("RECIPT")
-print (drink + drink_price)
-print (meal + food_price2)
-print (dessert + food_price3)
-print (f"FULL PRICE {food_price4}")
+print("RECEIPT")
+
+print (f"♡ Drink: {drink_price}")
+
+print (f"♡ Meal: {food_price2}")
+
+print (f"♡ Dessert: {food_price3}")
+
+print("♡~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~♡")
+
+print (f"♡ Tip added: {tip}")
+
+print("♡~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~♡")
+
+print (f"♡ Full Price: {food_price4}")
+
+print("♡~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~♡")
+
 
 print("Thank you! Have a lovely day!")
 # -------------------------------------------- 
