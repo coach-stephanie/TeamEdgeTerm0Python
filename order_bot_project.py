@@ -63,6 +63,10 @@ from socket import if_nameindex
 
 
 food_price = 0
+drink_price = 0
+food_price2 = 0
+food_price3 = 0
+food_price4 = 0
 
 
 
@@ -134,15 +138,15 @@ else:
 	print("I need a number!")
 
 if drink == 1:
-	food_price1 = food_price + 5.25
+	drink_price = food_price + 5.25
 elif drink == 2:
-	food_price1 = food_price + 5.25
+	drink_price = food_price + 5.25
 elif drink == 3:
-	food_price = food_price + 5.05
+	drink_price = food_price + 5.05
 elif drink == 4:
-	food_price1 = food_price + 5.25
+	drink_price = food_price + 5.25
 elif drink == 5:
-	food_price1 = food_price + 0
+	drink_price = food_price + 0
 
 meal = int(input("What meal would you like to order? (Pick 6-11! If you don't want anything from here, type 12)"))
 if meal == 6:
@@ -206,7 +210,7 @@ elif dessert == 17:
 elif dessert == 18:
 	food_price3 = food_price + 0
 
-food_price4 = food_price1 + food_price2 + food_price3
+food_price4 = food_price4 + drink_price + food_price2 + food_price3
 
 
 
@@ -226,7 +230,7 @@ food_price4 = food_price1 + food_price2 + food_price3
 # Remember! Functions are meant to be reusable, so write a function that will work when called for each person!
 
 # -------------------------------------------- 
-food_price4 = food_price4 * 0.08875
+food_price4 = food_price4 * 0.0875
 print(f"Your total price is {food_price4}")
 tip = input("Would you like to add a tip?")
 if tip == "yes":
@@ -270,7 +274,7 @@ elif tip == "no":
 # -------------------------------------------- 
 
 print("RECIPT")
-print (drink + food_price1)
+print (drink + drink_price)
 print (meal + food_price2)
 print (dessert + food_price3)
 print (f"FULL PRICE {food_price4}")
