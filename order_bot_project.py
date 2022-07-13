@@ -132,7 +132,7 @@ def order2():
 		order2()
 
 
-	
+
 def order3t():
 	order3 = input("Hello, what would you like from our deserts?").lower()
 	if order3 == "cookie":
@@ -142,7 +142,7 @@ def order3t():
 		print (f"Without tax {pricet}")
 		pricewt = round(pricet * 1.08875, 2)
 		print (f"With Tax {pricewt}")
-		tip = int(input("How many dollars for tip?"))
+		tip = float(input("How many dollars for tip?"))
 		Finalp = tip + pricewt
 		print("Here is you recipt")
 		print (reciptf)
@@ -156,7 +156,7 @@ def order3t():
 		print (f"Without tax {pricet}")
 		pricewt = round(pricet * 1.08875, 2)
 		print (f"With Tax {pricewt}")
-		tip = int(input("How many dollars for tip?"))
+		tip = float(input("How many dollars for tip?"))
 		print("Here is you recipt")
 		Finalp = tip + pricewt
 		print (reciptf)
