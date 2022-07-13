@@ -58,6 +58,9 @@ userdrink = 0.00
 userfood  = 0.00
 userdessert = 0.00
 
+userorderDr = ""
+userorderF = ""
+userorderDe = ""
 #Tax = price_total % 8.875
 # -------------------------------------------- 
 
@@ -100,17 +103,20 @@ display_menu()
 # --------------------------------------------
 def drink():
 	global userdrink
-
+	global userorderDr
 	drink = int(input("Drink bud? What do you want? Choose 4-6 or any other number if you arent thirsty \n"))
 	if drink == 4:
 		print("Water? Ok. \n") 
 		userdrink = 1.50
+		userorderDr = "Water"
 	elif drink == 5:
 		print("Juice? No problem \n")
-		userdrink = 1.75	
+		userdrink = 1.75
+		userorderDr = "Juice"	
 	elif drink == 6:
 		print("Soda? Alright \n")
 		userdrink = 2.00
+		userorderDr = "Soda"
 	else:
 		print("No Bev??? Crazy")
 drink()
@@ -118,32 +124,40 @@ drink()
 
 def food():
 	global userfood
+	global userorderF
 	food = int(input("And what do you need to eat? Use 1-3 to choose and use other numbers for nothing\n"))
 	if food == 1:
 		print("Burger! Nice... \n")
 		userfood = 3.00
+		userorderF = "Burger (No Cheese)"
 	elif food == 2:
 		print("Fries. Gotcha \n")
 		userfood = 2.75
+		userorderF = "Fries"
 	elif food == 3:
 		print("Cheesburger. No problem. \n")
 		userfood = 3.75
+		userorderF = "Burger (Cheese)"
 	else:
 		print("Then why are you...nevermind")
 food()
 
 def dessert():
-	
+	global userdessert
+	global userorderDe
 	dessert = int(input("Do you want some dessert? Choose 7-9 or press any other number for nothing \n"))
 	if dessert == 7:
 		print("IceCream. We only have vanilla smh... \n")
 		userdessert = 2.50
+		userorderDe = "Ice Cream"
 	elif dessert == 8:
 		print("Scones. Alright \n")
 		userdessert = 3.75
+		userorderDe = "Scones"
 	elif dessert == 9:
 		print("Cake. We only have chocolate. \n")
 		userdessert = 4.00
+		userorderDe = "Chocolate Cake"
 	else:
 		print("No dessert? Okay \n")
 dessert()
@@ -165,16 +179,18 @@ dessert()
 final = input("will that be all? Y/N \n")
 if final == "Y":
 	print("Cool, here is the total \n ")
+	
 
 
 if final == "N":
 	print("Too bad, here is your total: \n")
+	
 
 
 print("-------Total-----\n")
-print(f"Drink: ${userdrink}")
-print(f"Food: ${userfood}")
-print(f"Dessert: ${userdessert} \n")
+print(f"{userorderDr}: ${userdrink}")
+print(f"{userorderF}: ${userfood}")
+print(f"{userorderDe}: ${userdessert} \n")
 
 print("--------Receipt------")
 
@@ -201,21 +217,23 @@ print("--------Receipt------")
 
 subtotal = userdrink + userfood + userdessert
 # -------------------------------------------- 
-Tax = 0.08875
-total = (subtotal*Tax) + (subtotal)
+tax2 = 0.08875
+Tax = 8.8
+total = (subtotal*tax2) + (subtotal)
 
 def receipt():
-	print(f"Drink: ${userdrink}")
-	print(f"Food: ${userfood}")
-	print(f"Dessert: ${userdessert} \n")
+	print(f"{userorderDr}: ${userdrink}")
+	print(f"{userorderF}: ${userfood}")
+	print(f"{userorderDe}: ${userdessert} \n")
 	print(f"Subtotal: ${subtotal}")
-	print(f"Tax: 0.08875")
+	print(f"Tax: {Tax}%")
+	
 	
 
 
 
 
-	print(f"Total: {total}")
+	print(f"Total: {round(total, 2)}")
 receipt()
 
 # -------------------------------------------- 
