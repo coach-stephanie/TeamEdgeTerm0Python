@@ -48,20 +48,41 @@
 
 # Gonna try making my own >:c
 # --------------------------------------------------
+commands= 'Type add or remove, then your item to make changes to the list. \nType mylist anytime to check the items on your list. \nType exit() anytime to leave the list.'
+
 print('Smart Shopping List here, what do you wish to do today?')
-print('Type add or remove, then your item to make changes to the list.')
-print('Type mylist anytime to check the items on your list.')
-print('Type exit() anytime to leave the list.')
+print(commands)
 
 active = True
 mylist = []
 
 
 while active:
-    user_input = input('What do you want to do? >> ')
+    user_input = input('What do you want to do? >> ').lower()
     user_input = user_input.split()
     user_cmd = user_input.pop(0)
-    
+    user_input = " ".join(user_input)
+
+    if user_cmd == 'add':
+        if user_input in mylist:
+            print('Item is already in the list.')
+        elif user_input not in mylist:
+            mylist.append(str(user_input))
+    elif user_cmd == 'remove':
+        if user_input not in mylist:
+            print("Item doesn't exist.")
+        elif user_input in mylist:
+            mylist.remove(str(user_input))
+    elif user_cmd == 'mylist':
+        print(mylist)
+    elif user_cmd == 'exit()':
+        active = False
+        print('Thank you for using this program.')
+    elif user_cmd == 'cmds':
+        print(commands)
+    else:
+        print('Error, Try Again')
+
 
     
 
