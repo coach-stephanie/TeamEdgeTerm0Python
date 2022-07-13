@@ -72,7 +72,7 @@ user_dessert = ""
 def drink_ouput():
 	#price1_2 = 2
 	global user_drink
-	drink = int(input("What whould you like to drink? (Enter 1 or 2)"))
+	drink = int(input("What whould you like to drink? (Enter 1 or 2)\n"))
 	if drink == 1:
 		price1_2 = 2.0
 		user_drink = "Coke - $02.00"
@@ -81,6 +81,9 @@ def drink_ouput():
 		price1_2 = 2.0
 		user_drink = "Pepsi - $02.00"
 		return price1_2
+	else:
+		print(" You enter a wrong number: Traking IP ...")
+	
 #drink_ouput()
 #END OF DRINK
 
@@ -92,7 +95,7 @@ def meal_output():
 	# price4 = 3.0
 	# price5 = 4.0
 	global user_meal
-	meal = int(input("What whould you like to eat? (Enter 3, 4 or 5)"))
+	meal = int(input("What whould you like to eat? (Enter 3, 4 or 5)\n"))
 	if meal == 3:
 		price3 = 6.0
 		user_meal = "Hamburger - $06.00"
@@ -115,7 +118,7 @@ def dessert_output():
 	# price6 = 3.5
 	# price7 = 4.0
 	global user_dessert
-	dessert = int(input("What whould you like for dessert? (Enter 6 or 7)"))
+	dessert = int(input("What whould you like for dessert? (Enter 6 or 7)\n"))
 	if dessert == 6:
 		price6 = 3.5
 		user_dessert = "Cake - $03.50"
@@ -131,7 +134,7 @@ def dessert_output():
 
 cost = drink_ouput() + meal_output() + dessert_output()
 taxes_cost = cost*0.08875
-total_cost = cost + taxes_cost
+total_cost = round((cost + taxes_cost), 5)
 
 print("your order total with tax is: ")
 print(total_cost)
@@ -140,38 +143,38 @@ print(total_cost)
 #HERE STARTS COSTUMERS TIP
 def tip():
 	costumers_tip = input("Would you like to leave a tip? (10%, 15%, 20%, 22%):  ")
-	if costumers_tip=="10%":
-		consumer_tip = total_cost*0.1
+	if costumers_tip=="10%" or costumers_tip=="10":
+		consumer_tip = round((total_cost*0.1), 3)
 		return str(consumer_tip)
-	elif costumers_tip=="15%":
-		consumer_tip = total_cost*0.5
+	elif costumers_tip=="15%" or costumers_tip=="15":
+		consumer_tip = round((total_cost*0.15), 3)
 		return str(consumer_tip)
-	elif costumers_tip=="20%":
-		consumer_tip = total_cost*0.2
+	elif costumers_tip=="20%" or costumers_tip=="20":
+		consumer_tip = round((total_cost*0.2), 3)
 		return str(consumer_tip)
-	elif costumers_tip=="22%":
-		consumer_tip = total_cost*0.22
+	elif costumers_tip=="22%" or costumers_tip=="22":
+		consumer_tip = round((total_cost*0.22), 3)
 		return str(consumer_tip)
 	elif costumers_tip=="0" or costumers_tip=="zero" or costumers_tip=="0%":
 		return 0.0
 #tip()
 # COSTUMERS TIP END 
 
-users_tip = str(tip())
-
+users_tip = tip()
+Total_total_cost = float(users_tip) + total_cost
 # START OF RECEIPT
 
 #Final_cost = total_cost + users_tip
-print("Thanks! This is your receipt:")
+print("\nThanks! This is your receipt:\n")
 
 print(user_drink )
 print(user_meal )
 print(user_dessert )
 print("Subtotal: $", str(cost))
-print("Tax: $0.08875")
-print("Tip: $" + users_tip)
-print("Total: $", str(total_cost))
-print("\n Come again soon!")
+print("Tax: $",str(taxes_cost))
+print("Tip: $" + str(users_tip))
+print("Total: $", str(Total_total_cost))
+print("\nCome again soon!")
 
 
 # -------------------------------------------- 
