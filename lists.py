@@ -169,6 +169,11 @@ late[2] = "Jacob"
 print(late)
 #-->TODO: Add an exclamation mark to this sentence using split() and append(), then print. (yes, there are other ways, but...)
 make_me_exciting = "What a wonderful day"
+change = make_me_exciting.split(" ")
+print(change)
+change.append("!")
+print(change)
+
 
 #We can also join our list elements into a string using.....join()!
 rejoined = " ".join(boring_list)  #joins it using spaces
