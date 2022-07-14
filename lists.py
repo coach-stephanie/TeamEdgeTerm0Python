@@ -151,7 +151,7 @@ print("songs: " + str(songs))
 
 songs.append("Star")
 songs.append("Cotton Candy Skies")
-print("Song list now have: " + str(movies))
+print("Song list now have: " + str(songs))
 
 #We can also remove elements using .pop(), which removes the last element or the element at the given index. You can store it after it comes out:
 cities = ["New York", "Oakland", "Las Vegas", "Topeka"]
@@ -161,8 +161,10 @@ print("unwanted city: " + str(unwanted_city))
 
 #-->TODO: remove your last song using .pop() and print the removed element as above
 
-unwanted_song = songs.pop(4)
+
+unwanted_song = songs.pop(6)
 print("unwanted song:" + str(unwanted_song))
+
 #Note: there are more methods to remove and modify list elements. We will cover those later
 
 print("------------------- CHALLENGE 6 -------------------")
@@ -175,6 +177,8 @@ print(f"There are {how_many_cities} ciites in my list")
 
 #-->TODO: Print out the number of friends, or other items from other lists using string literals as above
 
+how_many_friends = len(friends)
+print(f"I have {how_many_friends} friends in my list")
 
 #The len() function is key, especially in conditionals or to simply count how many times to do something.
 
@@ -185,6 +189,10 @@ else:
 
 #-->TODO: Write another if/else statement to check the size of your songs list. If you have 5 of less, add two more songs!
 
+if len(songs) > 5:
+    print("There are more than 5 songs in my list!")
+else:
+    print("I need more songs :C")
 
 print("------------------- CHALLENGE 7 -------------------")
 
@@ -202,11 +210,19 @@ print("letter by letter: " + str(word_split_list))
 #-->TODO: Change the name of the person who is late in this sentence and print it.
 split_me = "I heard Alex was late to class today."
 
+friend = "I heard Paul was late to class today"
+friend_split_list = friend.split(" ")
+print("How to be late to class: " + str(friend_split_list))
+
 #-->TODO: Add an exclamation mark to this sentence using split() and append(), then print. (yes, there are other ways, but...)
 make_me_exciting = "What a wonderful day"
+
+friend.split ("!")
+print("Yes, there are other ways, but ")
 
 #We can also join our list elements into a string using.....join()!
 rejoined = " ".join(boring_list)  #joins it using spaces
 print('back in one piece: ' + rejoined)
 
 #-->TODO:  Finally, put the split_me sentence today and the make_me_exciting strings back together and print. You should see a string
+ 
