@@ -78,13 +78,13 @@ def times_ten(number):
 
 numbers[0] = times_ten(numbers[0])
 print(numbers)
-
+print(whole_numbers)
 #-->TODO: Write another function that multiplies a number by 1000 and print the list, as above 
-def times_onethousand(whole_numbers):
-    whole_numbers = whole_numbers *1000
-    return whole_numbers
+def times_onethousand(number):
+    number = number *1000
+    return number
 
-whole_numbers[0] = times_ten(whole_numbers*1000)
+whole_numbers[0] = times_onethousand(whole_numbers[0])
 print(whole_numbers)
 
 #-->TODO: Replace your random list elements with anything you want, using the index. 
@@ -172,14 +172,22 @@ print("letter by letter: " + str(word_split_list))
 #using this you can split strings up by any character!
 
 #-->TODO: Change the name of the person who is late in this sentence and print it.
-split_me = "I heard Alex was late to class today."
-
-
+sentence2 = "I heard Alex was late to class today."
+sentence2_split = sentence2.split()
+sentence2_split[2] = "Bobby"
+print(sentence2_split)
 #-->TODO: Add an exclamation mark to this sentence using split() and append(), then print. (yes, there are other ways, but...)
 make_me_exciting = "What a wonderful day"
-
+make_me_exciting_split=make_me_exciting.split()
+make_me_exciting_split.append("!")
+print(make_me_exciting_split)
 #We can also join our list elements into a string using.....join()!
 rejoined = " ".join(boring_list)  #joins it using spaces
 print('back in one piece: ' + rejoined)
 
+rejoined1 = " ".join(sentence2_split)
+print('back in one piece: ' + rejoined1)
+
+rejoined2 = " ".join(make_me_exciting_split)
+print('back in one piece: ' + rejoined2)
 #-->TODO:  Finally, put the split_me sentence today and the make_me_exciting strings back together and print. You should see a string
