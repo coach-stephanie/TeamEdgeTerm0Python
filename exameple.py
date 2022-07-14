@@ -12,7 +12,6 @@
  # 
  # ***************************************************************/
 
-#DON'T CHANGE THIS FILE
 active = True
 
 print("Welcome to Shopping List!")
@@ -21,40 +20,28 @@ welcome_message = "Hi! I'm your shopping assistant. Let me take your order. \n Y
 
 print(welcome_message)
 
-#you split the user reply three times, each function should do something completely different and have a different use
+
 #-->Todo: declare a shopping_list list
-shopping_list = []
+
 
 def prompt_user():
 
-    reply = input("What do you want to add or remove?  >>  ").lower()
-
-    return reply
-
+    reply = input("What do you want to add or remove?  >>  ")
+    check_answer(reply)
+    
 
 def check_answer(ans):
-    answer = ans.split(" ")
-    if answer[0]=="add":
-        add_item(answer[1])
-    elif answer[0]=="remove":
-        remove_item(answer[1])
-    
-    #this function can take in a string and store it in an array
+    ans.split(" ")
+    pass
 
-def add_item(item):
-    global shopping_list
-    shopping_list.append(item)
-    print("adding: " + str(item))
-    print("the shopping list now has:" + str(shopping_list))
-    
 
-def remove_item(item):
-    global shopping_list
-    if item in shopping_list:
-        shopping_list.remove(item)
-        print(str(item) +" removed. The shopping list now has: " + str(shopping_list))
-    
+def add_item():
+#this function can take in a string and store it in an array
+    pass
 
+
+def remove_item():
+    pass
 
 while active:
 
