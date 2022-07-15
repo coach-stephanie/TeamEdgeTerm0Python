@@ -44,17 +44,21 @@ def sub_numbers(num1, num2):
 
 
 
-
+# def check_answers(gen_answer, correct_answer):
+#     if gen_answer == correct_answer:
+#         print("Your code works!")
+#     else:
+# 	    print(f"Try again, your code generated {gen_answer} but the correct answer is {correct_answer}")
 # ------------
 # Testing Code - Uncomment the code below to test your code!
 
-check_answers(add_numbers(5, 15), 20)
-check_answers(add_numbers(3, 18), 21)
-check_answers(add_numbers(12, 28), 40)
+# check_answers(add_numbers(5, 15), 20)
+# check_answers(add_numbers(3, 18), 21)
+# check_answers(add_numbers(12, 28), 40)
 
-check_answers(sub_numbers(18, 7), 11)
-check_answers(sub_numbers(11, 9), 2)
-check_answers(sub_numbers(18, 21), -3)
+# check_answers(sub_numbers(18, 7), 11)
+# check_answers(sub_numbers(11, 9), 2)
+# check_answers(sub_numbers(18, 21), -3)
 
 # -------------------------------------------- 
 
@@ -72,6 +76,9 @@ check_answers(sub_numbers(18, 21), -3)
 
 # Write a function called multiply_numbers that will take two numbers and return the product.
 
+def multiply_numbers(num1, num2):
+	product = num1 * num2
+	return product
 
 
 
@@ -79,21 +86,22 @@ check_answers(sub_numbers(18, 21), -3)
 
 # Write a function called divide_numbers that will take two numbers and return the quotient.
 
-
-
+def divide_numbers(num1, num2):
+	division = num1/num2
+	return division
 
 
 
 # ------------
 # Testing Code - Uncomment the code below to test your code!
 
-# check_answers(multiply_numbers(10, 3), 30); 
-# check_answers(multiply_numbers(21, 7), 147);
-# check_answers(multiply_numbers(4, 16), 64); 
+# check_answers(multiply_numbers(10, 3), 30)
+# check_answers(multiply_numbers(21, 7), 147)
+# check_answers(multiply_numbers(4, 16), 64)
 
-# check_answers(divide_numbers(24, 100), `.24`);
-# check_answers(divide_numbers(21, 7), `3`);
-# check_answers(divide_numbers(15, 4), `3.75`);
+# check_answers(divide_numbers(24, 100), .24)
+# check_answers(divide_numbers(21, 7), 3)
+# check_answers(divide_numbers(15, 4), 3.75)
 
 # -------------------------------------------- 
 
@@ -106,23 +114,42 @@ check_answers(sub_numbers(18, 21), -3)
 
 # -------------------------------------------- 
 
+def  user_prompt():
+	reply = input("Do you want to sum, substract, multiply or divide ?\n").lower()
+	return reply
+
+
+def first_num():
+	number1 = int(input("Write the first number: "))
+	return number1
+
+
+def second_num():
+	number2 = int(input("Write the second number: "))
+	return number2
 
 
 
+def calculate():
+	answer = user_prompt()
+	num_1 = first_num()
+	num_2 = second_num()
+
+	if answer=="sum" or answer=="add":
+		addition = add_numbers(num_1, num_2)
+		print("The answer is: " + str(addition))
+	elif answer=="subtract" or answer =="-":
+		substraction = sub_numbers(num_1, num_2)
+		print("The answer is: " + str(substraction))
+	elif answer=="multiply" or answer=="x":
+		multiplication = multiply_numbers(num_1, num_2)
+		print("The answer is: " + str(multiplication))
+	elif answer=="divide" or answer=="/":
+		division = divide_numbers(num_1, num_2)
+		print("The answer is: " + str(division))
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+calculate()
 # -------------------------------------------- 
 
 # Part 4: 
@@ -145,10 +172,18 @@ check_answers(sub_numbers(18, 21), -3)
   
 # -------------------------------------------- 
 
-
-
-
-
+#ADD NUMBERS
+def add_numbers(num1, num2):
+	numbers_sum = num1 + num2
+	return numbers_sum
+#SUBSTRACT NUMBERS
+def sub_numbers(num1, num2):
+	numbers_sub = num1 - num2
+	return numbers_sub
+#MULTIPLY NUMBERS 
+def multiply_numbers(num1, num2):
+	product = num1 * num2
+	return product
 
 
 
@@ -168,8 +203,8 @@ check_answers(sub_numbers(18, 21), -3)
 # -------------------------------------------- 
 # Ignore this section. This is just for checking your work
 
-def check_answers(gen_answer, correct_answer):
-    if gen_answer == correct_answer:
-        print("Your code works!")
-    else:
-	    print(f"Try again, your code generated {gen_answer} but the correct answer is {correct_answer}")
+# def check_answers(gen_answer, correct_answer):
+#     if gen_answer == correct_answer:
+#         print("Your code works!")
+#     else:
+# 	    print(f"Try again, your code generated {gen_answer} but the correct answer is {correct_answer}")
