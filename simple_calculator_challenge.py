@@ -11,6 +11,9 @@
 
   # -------------------------------------------- 
 
+import numbers
+
+
 print("My Simple Calculator")
 
 # -------------------------------------------- 
@@ -26,17 +29,21 @@ print("My Simple Calculator")
 		# Subtraction
 
 # -------------------------------------------- 
-
+def check_answers(gen_answer, correct_answer):
+    if gen_answer == correct_answer:
+        print("Your code works!")
+    else:
+	    print(f"Try again, your code generated {gen_answer} but the correct answer is {correct_answer}")
 # Write a function called add_numbers that will take two numbers and return the sum.
-
-
-
-
-
-
+def add_numbers(num1,num2):
+	sum= num1 + num2
+	print(sum)
 
 # Write a function called sub_numbers that will take two numbers and return the difference.
-
+#def subtraction(x,y):
+def sub_numbers(num1,num2):
+	sum= num1 - num2
+	print(sum)
 
 
 
@@ -69,6 +76,9 @@ print("My Simple Calculator")
 # Write a function called multiply_numbers that will take two numbers and return the product.
 
 
+def multiply_numbers(num1,num2):
+	product= num1 * num2
+	print(product)
 
 
 
@@ -76,6 +86,9 @@ print("My Simple Calculator")
 # Write a function called divide_numbers that will take two numbers and return the quotient.
 
 
+def divide_numbers(num1,num2):
+	quotient= num1/num2
+	print(quotient)
 
 
 
@@ -87,9 +100,9 @@ print("My Simple Calculator")
 # check_answers(multiply_numbers(21, 7), 147);
 # check_answers(multiply_numbers(4, 16), 64); 
 
-# check_answers(divide_numbers(24, 100), `.24`);
-# check_answers(divide_numbers(21, 7), `3`);
-# check_answers(divide_numbers(15, 4), `3.75`);
+# check_answers(divide_numbers(24, 100),.24);
+# check_answers(divide_numbers(21, 7), 3);
+# check_answers(divide_numbers(15, 4), 3.75);
 
 # -------------------------------------------- 
 
@@ -102,8 +115,22 @@ print("My Simple Calculator")
 
 # -------------------------------------------- 
 
+answer=input("What type of operation do you want to do :")
+def calc():
+	num1= int(input("Enter first number:"))
+	num2= int(input("Enter second number:"))
 
+	if answer=="+":
+		add_numbers(num1,num2)
+	if answer=="-":
+		sub_numbers(num1,num2)
+	if answer=="*":
+		multiply_numbers(num1,num2)
+	if answer=="/":
+		divide_numbers(num1,num2)
 
+calc()
+	
 
 
 
@@ -164,8 +191,3 @@ print("My Simple Calculator")
 # -------------------------------------------- 
 # Ignore this section. This is just for checking your work
 
-def check_answers(gen_answer, correct_answer):
-    if gen_answer == correct_answer:
-        print("Your code works!")
-    else:
-	    print(f"Try again, your code generated {gen_answer} but the correct answer is {correct_answer}")
