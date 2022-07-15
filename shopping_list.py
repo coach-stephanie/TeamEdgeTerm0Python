@@ -28,35 +28,34 @@ shopping_list = []
 def prompt_user():
 
     reply = input("What do you want to add or remove?  >>  ")
-
-    # shopping_list.append(reply)
-    # reply_words = reply.split(" ")
-    # print(reply_words[1])
+    return reply
 
     
-# prompt_user()
+
 def check_answer(ans):
 
+    ans_list = ans.split(" ")
+    add_or_remove = ans_list[0]
+    groceries = ans_list[1]
+    if add_or_remove == "add":
+        add_item(groceries)
+    elif add_or_remove == "remove":
+        remove_item(groceries)
 
-a_split = ans.split(" ")
-add_or_remove = a_split[0]
-groceries = a_split[1]
-if add_or_remove == "add":
-    add_item(groceries)
-def add_item():
- #this function can take in a string and store it in an array
- reply = input("What do you want to add or remove?  >>  ")
-if reply == "add" + str(reply):
-    shopping_list.append(reply_words)
+def add_item(item):
+#this function can take in a string and store it in an array
+    global shopping_list 
+    shopping_list.append(item)
+
+
+
+
+def remove_item(item):
+    global shopping_list
+    shopping_list.remove(item)
     
 
-    pass
-
-add_item()
-def remove_item():
-    pass
 
 while active:
-
     check_answer(prompt_user()) #this makes the program continously prompt and check response while the boolean 'active' returns True
-remove_item()
+    print(f"Your shopping list now has: {shopping_list}")
