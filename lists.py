@@ -29,35 +29,39 @@ print("names: " + str(names))
 
 #-->TODO: Declare another list called friends with at least 5 strings inside (if you don't have 5 friends make them up!)
 
-
+friends = ["Franco","Mijail","Brian","Josiel","Ernesto"]
+print("names: " + str(friends))
 #this list holds numbers
 numbers = [12.9, 23.4 , 100, 3.1415 , 500, 1.20]
 print("numbers: " + str(numbers)) 
 
 #-->TODO: Declare another list and add in at least 5 numbers. Why five? I don't know. It just feels right.
-
-
+my_numbers = [12, 7, 50.5, 10.5, 32]
+print("numbers: " + str(my_numbers))
 
 #this list has mixed data types. It's allowed in Python!
 random_stuff = ["Aardvark", True, False, 1.23, "Grandpa"]
 print("random: " + str(random_stuff))
 
 #-->TODO: Declare and log a list filled with the first 5 things that come into your head, booleans, Strings, numbers are all cool,
-
+random_thoughts = ["Avatar", False, 4, 1004, True]
+print("random: " + str(random_thoughts))
 
 #-->TODO: Declare and log two more lists with whatever you want. 
-
-
+wherever_1 = ["wherever", True, 7]
+wherever_2 = ["I don't know", False, 30]
+print("Wherever 1: " + str(wherever_1))
+print("Wherever 2: " + str(wherever_2))
 print("------------------- CHALLENGE 2 -------------------")
  
 #This code logs the first element of the names list:
 print("The first name is " + names[0])
 
 #-->TODO: Print the name of your best friend from your friends list
-
+print("Best friend name is: " + friends[1])
 
 #-->TODO: Print the first AND last elements of any list you made, or make a brand new one.
-
+print(random_thoughts[0] + " " + str(wherever_1[-1]))
 
 print("------------------- CHALLENGE 3 -------------------")
 #this code changes the value of the second element of the names list, then we print the list:
@@ -65,7 +69,9 @@ names[1] = "Alyssa"
 print(names)
 
 #-->TODO: Replace your friends! Modify the list to replace any or all of your friends with new ones.
-
+friends[2] = "Brad"
+replace = friends.pop()
+print(friends)
 
 #The code below uses the times_ten() function to multiply the first element in our list by 10:
 def times_ten(number):
@@ -76,10 +82,18 @@ numbers[0] = times_ten(numbers[0])
 print(numbers)
 
 #-->TODO: Write another function that multiplies a number by 1000 and print the list, as above 
-
-
+def times_onehundred(my_numbers):
+    my_numbers = my_numbers * 100
+    return my_numbers
+my_numbers[0] = times_onehundred(my_numbers[0])
+print(my_numbers)
 
 #-->TODO: Replace your random list elements with anything you want, using the index. 
+
+random_thoughts[1] = True
+random_thoughts[0] = "Hola"
+random_thoughts[2] = 23.5
+print(random_thoughts)
 
 print("------------------- CHALLENGE 4 -------------------")
 
@@ -90,7 +104,8 @@ parent_list = [child_list_1, child_list_2]
 print("This list has babies: " + str(parent_list))
 
 #-->TODO: Store and print all the lists we have worked on thus far in a new parent list
-
+head_list = [random_thoughts, my_numbers]
+print("\nThis is my babie lists: " + str(head_list))
 
 print("------------------- CHALLENGE 5 -------------------")
 
@@ -102,8 +117,13 @@ movies.append("Black Panther")
 print("Movies now has: " + str(movies))
 
 #-->TODO: Declare a list with 5 favorite songs
+my_songs = ["Si veo a tu mama", "Balling", "Amorfoda"]
+print("\nSteven's songs: " + str(my_songs))
 
 #-->TODO: Add 2-3 more songs using .append() and print both before and after.
+my_songs.append("Besame sin sentir")
+my_songs.append("El mismo aire")
+print("\nMy songs now are: " + str(my_songs))
 
 #We can also remove elements using .pop(), which removes the last element or the element at the given index. You can store it after it comes out:
 cities = ["New York", "Oakland", "Las Vegas", "Topeka"]
@@ -112,7 +132,9 @@ unwanted_city = cities.pop()
 print("unwanted city: " + str(unwanted_city))
 
 #-->TODO: remove your last song using .pop() and print the removed element as above
-
+remove = my_songs.pop()
+print(my_songs)
+print("\nSong removed: " + str(remove))
 #Note: there are more methods to remove and modify list elements. We will cover those later
 
 print("------------------- CHALLENGE 6 -------------------")
@@ -124,8 +146,9 @@ how_many_cities = len(cities)
 print(f"There are {how_many_cities} ciites in my list")
 
 #-->TODO: Print out the number of friends, or other items from other lists using string literals as above
-
-
+print(f"\nI have {len(friends)} friends")
+number_songs = len(my_songs)
+print(f"\nI have {number_songs} songs in my list")
 #The len() function is key, especially in conditionals or to simply count how many times to do something.
 
 if len(numbers) > 3:
@@ -134,7 +157,10 @@ else:
     print("I need more numbers in my list!!!")
 
 #-->TODO: Write another if/else statement to check the size of your songs list. If you have 5 of less, add two more songs!
-
+if len(my_songs) > 4:
+    print("There are more than 4 songs in my list")
+else:
+    print("I need more numbers in my list!!")
 
 print("------------------- CHALLENGE 6 -------------------")
 
@@ -151,12 +177,19 @@ print("letter by letter: " + str(word_split_list))
 
 #-->TODO: Change the name of the person who is late in this sentence and print it.
 split_me = "I heard Alex was late to class today."
-
+my_split = split_me.split(" ")
+my_split[2] = "Julian"
+print("Who is late? " + str(my_split))
 #-->TODO: Add an exclamation mark to this sentence using split() and append(), then print. (yes, there are other ways, but...)
 make_me_exciting = "What a wonderful day"
-
+spliting = make_me_exciting.split(" ")
+spliting.append("!")
+print(spliting)
+print("Yes there are another ways, but ...")
 #We can also join our list elements into a string using.....join()!
 rejoined = " ".join(boring_list)  #joins it using spaces
 print('back in one piece: ' + rejoined)
 
 #-->TODO:  Finally, put the split_me sentence today and the make_me_exciting strings back together and print. You should see a string
+my_rejoin = " ".join(spliting)
+print('This is a string: ' + my_rejoin)
