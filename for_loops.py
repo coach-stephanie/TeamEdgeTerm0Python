@@ -26,6 +26,8 @@ for x in range(11):
 
 #-->TODO: Write a loop that prints a happy birthday message for every year you have been alive.
 
+for x in  range(15):
+    print("Happy birthday! Are you " + str(x))
 
 
 print("------------------- CHALLENGE 2 : ITERATOR ----------------------")
@@ -38,11 +40,12 @@ for x in colors:
     print("The color is: " + x)
 
 #-->TODO: Declare a list with at least 5 animals. You provide the animals.
-animals = []
+animals = ['Dog' , 'Fox' , 'Owl', 'Cat', 'Dolphin']
 
 #-->TODO: Print all the animals in the array with a for loop. 
 
-
+for x in animals:
+    print("My favorite animal is a " + x)
 
 print("------------------- CHALLENGE 3 : EVEN COUNTDOWN ------------------")
 
@@ -57,10 +60,20 @@ else:
     print(str(random) + " is odd!")
 
 #-->TODO: Write a function that counts BACKWARDS from 100 and prints only even numbers
+def even():
+    for x in range(100, 0, -1):
+        print(x)
+    if x % 2 == 0:
+        print(x)
 
 
 #-->TODO: Write a function that counts BACKWARDS from the given random number and prints only odd numbers
 
+def odd_random():
+    for x in range(random, 0, -1):
+        print(x)
+    if x % 2 != 0:
+        print(x)
 
 print("------------------- CHALLENGE 4 : Finder ------------------")
 
@@ -72,16 +85,20 @@ else:
     print("No, that color is not one of my favorites")
 
 #-->TODO Declare a list of any strings you  want: cities, friends, movies, etc.
-
-
+fruit = ['apple' , 'plum' , 'blueberry' , 'peach' , 'lime' , 'dragon fruit' , 'lemon', 'blackberry' , 'raspberry', 'avacado', 'orange']
 
 #-->TODO Write function to prompt the user to "Guess" if an element is present in your list. Store their response in a variable. 
 #   --> If their guess is in your list, print CONGRATULATIONS!
 
+fruit = input('Try to guess my favorite fruits >>')
+if fruit in fruit:
+    print("Yess I love that fruit!")
+else:
+    print("Noo sorry :C I don't like that")
 
 #-->TODO Call your function.
 
-
+fruit()
 
 print("------------------- CHALLENGE 5 : Nested ------------------")
 
@@ -99,5 +116,13 @@ for color in colors:
 
 #-->TODO Write a function that prints every letter in a sentence that a user enters.
 
+def venti_word():
+    grand_word = input ("Type any sentence!")
+    for big in grand_word:
+        print(big)
+        for b in grand_word:
+            print(" - " + b)
+        
+venti_word()
 
 #-->CHALLENGE: Let the user know which word is the shortest one!
