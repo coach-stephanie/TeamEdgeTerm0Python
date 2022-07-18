@@ -65,7 +65,10 @@ def backwards():
 backwards()
 
 #-->TODO: Write a function that counts BACKWARDS from the given random number and prints only odd numbers
-
+def back():
+    for x in range(random, 0, 7):
+        print(x)
+back()
 
 print("------------------- CHALLENGE 4 : Finder ------------------")
 
