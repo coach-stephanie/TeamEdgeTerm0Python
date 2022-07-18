@@ -65,15 +65,15 @@ num2 = 10
 # **** Challenge 2: Problem 1 ****
 # Store the sum of num1 and num2 in a variable.
 # Print the sum.
-sum = 15
+sum = num1 + num2 
 print(sum)
 
 # **** Challenge 2: Problem 2 ****
 # Store the difference between sum (above) and 7 in a variable.
 # Print the difference.
 num3 = 7
-diff = 8
-print(sum - num3)
+diff = sum - num3
+print(diff)
 
 # **** Challenge 2: Problem 3 ****
 # Store the product of the difference and 3 in a variable.
