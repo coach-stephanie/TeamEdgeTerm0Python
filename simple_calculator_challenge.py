@@ -1,3 +1,6 @@
+import os 
+import sys 
+
 # -------------------------------------------- 
 
 	# You've just learned all about functions. 
@@ -12,6 +15,7 @@
   # -------------------------------------------- 
 
 print("My Simple Calculator")
+
 
 # -------------------------------------------- 
 
@@ -29,15 +33,19 @@ print("My Simple Calculator")
 
 # Write a function called add_numbers that will take two numbers and return the sum.
 
-
-
-
+def add_numbers(x, y):
+	return x+y
+	
 
 
 
 # Write a function called sub_numbers that will take two numbers and return the difference.
 
-
+def sub_numbers(x, y):
+	return x-y
+	
+	
+	
 
 
 
@@ -68,14 +76,18 @@ print("My Simple Calculator")
 
 # Write a function called multiply_numbers that will take two numbers and return the product.
 
-
+def multiply_numbers(x, y):
+	return x*y
+	
 
 
 
 
 # Write a function called divide_numbers that will take two numbers and return the quotient.
 
-
+def divide_numbers(x, y):
+	return x/y
+	
 
 
 
@@ -92,8 +104,18 @@ print("My Simple Calculator")
 # check_answers(divide_numbers(15, 4), `3.75`);
 
 # -------------------------------------------- 
+#Extra
 
-# Part 3: 
+def Power_numbers(x, y):
+	return x**y
+
+
+def Remainder_numbers(x, y):
+	return x%y
+	
+	
+
+# Part 3:
 
 	# Now that you have your basic functions in place, you need to get some user input.
 	# What's a calculator for if no one is using it?
@@ -102,7 +124,20 @@ print("My Simple Calculator")
 
 # -------------------------------------------- 
 
+def cal_sys(ans):
+	
+	try:
+		print(f"\n{eval(ans)}\n")
+	except:
+		print("\ninvalid input\n".upper())
 
+def user_promt():
+	
+	return input("\nThis calculator can add +, subtracted -, multiple *, divide /, to the power ** and find remainder.\n")
+
+
+while True:
+	cal_sys(user_promt())
 
 
 
