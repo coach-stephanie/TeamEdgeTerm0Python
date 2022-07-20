@@ -119,7 +119,7 @@ print("------------------- CHALLENGE 4 : MATH QUIZ   -------------------")
 is_correct = False
 
 
-print("------------------- CHALLENGE 5 : WHAT AM I?   -------------------")
+print("------------------- CHALLENGE 5 : WHAT AM I?   -------------------")       
 
 #-->TODO: Write a game loop that prompts that never stops asking, "I know you are a _____, but what am I?"
 #         You are given two starter functions and a loop to get started! 

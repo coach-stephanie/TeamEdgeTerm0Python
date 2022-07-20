@@ -54,7 +54,7 @@ def remove_item(item):
     global shopping_list
     shopping_list.remove(item)
     
-
+ 
 
 while active:
     check_answer(prompt_user()) #this makes the program continously prompt and check response while the boolean 'active' returns True
