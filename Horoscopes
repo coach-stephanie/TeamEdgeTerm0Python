@@ -1,0 +1,32 @@
+import random 
+
+print("What is your zodiac sign?")
+
+1 = leo
+2 = virgo
+3 = libra
+4 = scorpio
+5 = sagitarius
+6 = capricorn
+7 = aquarius
+8 = pisces
+
+select=random.randrange(1,8)
+if  select=0:
+	print(" Your day is going to suck")
+	elif  select=1
+	print("You will fall.")
+	elif  select=2
+	print("You will not eat the best meal of your life today.")
+	elif  select=3
+	print("Goodluck today.")
+	elif  select=4
+	print("bye.")
+	elif  select=5
+	print("hi.")
+	elif  select=6
+	print("Most likely.")
+	elif  select=7
+	print("you look good.")
+	elif  select=8
+	print("Yes.")

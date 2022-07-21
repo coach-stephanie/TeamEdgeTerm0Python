@@ -1,3 +1,4 @@
+import random 
 
 # -------------------------------------------- 
 # Day 2 Challenges
@@ -13,7 +14,12 @@ print("\n------------------- Challenge 1 -------------------\n")
    # Write conditional statements that print out whether the user is legally allowed to drive in your city. 
 
 
+age = input("Enter your age")
 
+if age >= "18" and age < "80":
+   print("you can drive!")
+else:
+   print("Sorry! You can't drive today.")
 
 
 
@@ -31,13 +37,18 @@ print("\n------------------- Challenge 2 -------------------\n")
 # Who placed first?
    # Create three variables and assign them random scores. 
    # Write conditional statements that check which is the highest score and prints it.
+    
 
+var1 =random.randrange(1,10)
+var2 = random.randrange(1,10)
+var3=  random.randrange(1,10)
+   
 
+if var1>var2  and var1>var3: 
+    print("1 wins!")
 
-
-
-
-
+elif var2>var1 and var2>var3:
+    print("2 wins")
 
 
 
@@ -58,7 +69,6 @@ print("\n------------------- Challenge 3 -------------------\n")
 # Snowing: Wear gloves and a scarf 
 
 # Here's a variable to get you started:
-weather = "rainy"
 
 
 
@@ -85,6 +95,16 @@ weather = "rainy"
    # Make sure to account for at least three different temperatures!
    # Hint: You will need another variable to keep track of the temperature.
 
+weather="rainy"
+degrees= 60
+if weather=="rainy"and degrees==30:
+   print("Bring an umbrella and wear a light jacket")
+elif weather=="sunny"and degrees==90:
+   print("Wear a hat and sunglasses")
+elif weather=="stormy" and degrees==60:
+   print("Don't go outside")
+else:
+    print("Wear gloves and a scarf")
 
 
 
@@ -105,8 +125,21 @@ print("\n------------------- Challenge 4 -------------------\n")
 # and print out the corresponding day of the week. 
 # Make sure to add a statement that accounts for any numbers out of range! 
 
-
-
+day = input("Enter a day")
+if day== 1:
+   print("Monday")
+elif day==2:
+   print("Tuesday")
+elif day==3:
+   print("Wednesday")
+elif day==4:
+   print("Thursday")
+elif day==5:
+   print("Friday")
+elif day==6:
+   print("Saturday")
+elif day==7:
+   print("Sunday")
 
 
 
@@ -118,6 +151,8 @@ print("\n------------------- Challenge 4 -------------------\n")
 # -------------------------------------------- 
 
 print("\n------------------- Challenge 5 -------------------\n")
+
+
 
 # A leap year is a calendar year that contains an additional day added 
 # to keep the calendar year synchronized with the astronomical year or seasonal year.
@@ -132,8 +167,15 @@ print("\n------------------- Challenge 5 -------------------\n")
 # Your challenge is to translate the steps above into conditionals which will evaluate if the 
 # year stored in a variable is/was a leap year.
 
-
-
+year = int(input("enter year\n"))
+if year%4==0:
+   if year%100==0:
+      if year%400==0:
+         print("this is a leap year. it has 366 days")
+      else: 
+         print("this is not a leap year  ")
+   else:
+      print("this is not a leap year")
 
 
 

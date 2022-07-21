@@ -14,34 +14,66 @@
 # -------------------------------------------- 
   # Challenge 1: Let's try to write some basic functions.
 # -------------------------------------------- 
+from calendar import FRIDAY, MONDAY, SATURDAY, SUNDAY, THURSDAY, TUESDAY, WEDNESDAY
+import random
+from urllib.parse import quote
+
 
 print("\n------------------- Challenge 1 -------------------\n")
 
 # **** Challenge 1: Problem 1 ****
 # Write a function called print_message() that prints any message you want.
-
+def print_message():
+	print("hi")
+	
+print_message()
 
 # **** Challenge 1: Problem 2 ****
 # Write a function called print_five_messages() that calls print_message() five times.
+def print_fivemessages():
+	print("hi")
+	print("hi")
+	print("hi")
+	print("hi")
+	print("hi")
+	
+print_fivemessages()
 
 
 # **** Challenge 1: Problem 3 ****
 # Write a function called get_user_input() that asks the user if they'd like to print your message
 # once or five times. Then call one of the two functions above based on what the user decides.
+def get_user_input():
+	
+	num=input("do you want to print your message one time or five times")
+	
+	if num == "1":
+		print_message()
+
+	elif num == "5":
+		print_fivemessages()
 
 
 # **** Challenge 1: Problem 4 ****
 # Write a function called print_greeting() that prints a greeting message to the user.
-
+def print_greeting(greeting_message):
+	print(f"dear bobby,{greeting_message}")
+print_greeting("hello")
 
 # **** Challenge 1: Problem 5 ****
 # Write a function called print_closing() that prints a goodbye message to the user.
-
+def print_closing(goodbye_message):
+    print(f"dear bobby,{goodbye_message}")
+print_closing("goodbye")
 
 # **** Challenge 1: Problem 6 ****
 # Write a function called run() that greets the user, asks them for input, and sends a goodbye message.
 # Remember! Use the functions that you've already made. Don't hardcode anything!
-
+def run():
+	get_user_input()
+	print_greeting("hi mom")
+	print_closing("bye kid")
+run()
 
 
 # -------------------------------------------- 
@@ -64,9 +96,17 @@ print("\n------------------- Challenge 2 -------------------\n")
 		# sum_double(2, 2) → 8
 
 # -------------------------------------------- 
+def sum_double(num1,num2):
+	
+	sum_double = num1 + num2
+	
 
+	if num1 == num2:
+		sum_double = sum_double * sum_double
+	return sum_double
 
-
+sd = sum_double(1,5)
+print(sd)
 
 
 
@@ -86,7 +126,12 @@ print("\n------------------- Challenge 2 -------------------\n")
 
 # -------------------------------------------- 
 
-
+def makes_10(a,b):
+	if a==10 or b==10 or a+b==10:
+		return True
+	else:
+			return False
+makes_10(10,10)
 
 
 
@@ -111,8 +156,24 @@ print("\n------------------- Challenge 2 -------------------\n")
 
 # -------------------------------------------- 
 
+def alarm(a,b):
+	 
+	if ( a==1 or a==2 or a==3 or a==4 or a==5 ) and b== False: 
+		print("7:00")
+	elif (a==0 or a==6) and b==False:
+		print("10:00")
+	elif (a==0 or a==6) and b==True:
+		print("off")
+	elif (a==1 or a==2 or a==3 or a==4 or a==5 ) and b==True:
+		print("10:00")
 
-
+	# 0 = "sunday"
+	# 1= "monday"
+	# 2= "tuesday"
+	# 3= "wednesday"
+	# 4= "thursday"
+	# 5= "friday"
+	# 6= "saturday"
 
 
 
@@ -135,10 +196,19 @@ print("\n------------------- Challenge 2 -------------------\n")
 # If speed is 81 or more, the result is 2.
 
 # -------------------------------------------- 
+#def speeding_ticket(speed):
+#	result=0
+#if speed=<60
+#	result
+#if speed(61,80)
 
 
+ #	0=no ticket
+#	1=small ticket
+#	2=big ticket
 
 
+#speeding_ticket(40)
 
 
 

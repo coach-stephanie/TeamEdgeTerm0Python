@@ -12,8 +12,11 @@
  # 
  # ***************************************************************/
 
-active = True
 
+
+
+active = True
+shopping_list=[]
 print("Welcome to Shopping List!")
 
 welcome_message = "Hi! I'm your shopping assistant. Let me take your order. \n You can type 'add milk' to add milk to your shopping list. \n or you can type 'remove milk' to remove it. \n"
@@ -25,23 +28,31 @@ print(welcome_message)
 
 
 def prompt_user():
-
     reply = input("What do you want to add or remove?  >>  ")
 
     return reply
 
+
 def check_answer(ans):
-    pass
+    input = ans.split()
+    #print(input)
+    if input[0]=="add":
+       add_item(input[1])
+    elif input[0]=="remove":
+        remove_item(input[1])
+  #  print(ans)
+
+def add_item(item):
+    shopping_list.append(item)
+    print(shopping_list)
+    
 
 
-def add_item():
-#this function can take in a string and store it in an array
-    pass
 
-
-def remove_item():
-    pass
-
+def remove_item(item):
+    shopping_list.remove(item)
+    print(shopping_list)
+#input.remove("remove")
 while active:
 
     check_answer(prompt_user()) #this makes the program continously prompt and check response while the boolean 'active' returns True
