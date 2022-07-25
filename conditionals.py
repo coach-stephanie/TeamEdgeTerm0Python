@@ -3,6 +3,11 @@
 # Day 2 Challenges
 # -------------------------------------------- 
 
+from calendar import SUNDAY
+from re import S
+import random
+
+
 message = "\nWelcome to Day 2.\nToday we are learning about conditionals.\nLet's practice writing some conditionals of our own!"
 print(message)
 # -------------------------------------------- 
@@ -13,11 +18,12 @@ print("\n------------------- Challenge 1 -------------------\n")
    # Write conditional statements that print out whether the user is legally allowed to drive in your city. 
 
 
+age = input('Enter your age:')
+if (age < "18") :
+   print("You can't drive")
 
-
-
-
-
+if (age >= "18"):
+   print("You can drive")
 
 
 
@@ -34,11 +40,19 @@ print("\n------------------- Challenge 2 -------------------\n")
 
 
 
+one = random.randrange(1, 100)
+two = random.randrange(1, 100)
+three = random.randrange(1, 100)
+if (one >= two) and  (one >= three):
+   print(f"{one} is the highest score")
 
 
+if (two >= one) and  (two >= three):
+   print(f"{two} is the highest score")
 
 
-
+if (three >= two) and  (three >= one):
+   print(f"{three} is the highest score")
 
 
 # -------------------------------------------- 
@@ -59,14 +73,25 @@ print("\n------------------- Challenge 3 -------------------\n")
 
 # Here's a variable to get you started:
 weather = "rainy"
+temp = 50
 
+if (weather == "rainy") and (temp >= 60):
+   print("Bring an umbrella and a light jacket")
 
+elif (weather == "rainy") and (temp < 60):
+   print("Bring an umbrella and a warm jacket")
 
+elif (weather == "Sunny") and ( temp >= 85):
+   print("Wear a hat, sunscreen, light clothes and sunglasses")
 
+elif (weather == "Sunny") and ( temp < 85):
+   print("Wear a hat, and sunglasses")
 
+elif (weather == "Snowing") and (temp >= 30) and (temp < 59):
+   print("Wear gloves and a scarf ")
 
-
-
+elif (weather == "Snowing") and (temp >= -100) and (temp < 5):
+   print("Don't go")
 
 
 
@@ -106,11 +131,32 @@ print("\n------------------- Challenge 4 -------------------\n")
 # Make sure to add a statement that accounts for any numbers out of range! 
 
 
+print("Enter the number of the day:")
+day = input()
 
+if day == "1":
+   print("monday")
 
+elif day == "2":
+   print("tuesday")
 
+elif day == "3":
+   print("wendsday")
 
+elif day == "4":
+   print("thursday")
 
+elif day == "5":
+   print("friday")
+
+elif day == "6":
+   print("saturday")
+
+elif day == "7":
+   print("sunday")
+
+elif day > "7":
+   print("Error")
 
 
 
@@ -132,8 +178,15 @@ print("\n------------------- Challenge 5 -------------------\n")
 # Your challenge is to translate the steps above into conditionals which will evaluate if the 
 # year stored in a variable is/was a leap year.
 
-
-
-
-
-
+print("What is the year?")
+year = int(input())
+if (year % 4 == 0):
+   if (year % 100 == 0):
+      if(year % 400 == 0):
+         print ("It's a leap year")
+      else:
+         s  print("It's not a leap year")
+   else:
+      print("It's a leap year")
+else:
+   print("It's not a leap year")
