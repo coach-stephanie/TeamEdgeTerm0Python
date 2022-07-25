@@ -41,8 +41,11 @@ def test_prime(n):
     return True
 
 #-->TODO: Declare a while loop that prints all the prime numbers between 0 and 100, use test_prime() helper function
-
-
+num = 0
+while num <= 100:
+  if test_prime(num)== True:
+    print(num)
+  num += 1
 
 print("------------------- CHALLENGE 2 : FOUND   -------------------")
 
@@ -51,7 +54,16 @@ items = ["pencil" , "eraser" , "mirror" , "comb" , "spoon" , "key" , "earrings" 
 
 #-->TODO: Use a while loop to search the contents of a list for the key! If it exists, print "found the key!"
 
+# search_item = False
+# while not search_item:
 
+idx = 0
+while idx < len(items):
+  if items[idx] == "key":
+    print("You found the key")
+  idx +=  1
+
+#print(items[0])
 
 print("------------------- CHALLENGE 3 : BUGGIN   -------------------")
 
@@ -61,9 +73,11 @@ print("------------------- CHALLENGE 3 : BUGGIN   -------------------")
 #-->TODO: Make me count  2, 4, 6,..., 50
 
 def even_numbers_to_fifty():
-    num = 50
+    num = 0
     while num < 50:
-        print("number: " + str(num))
+      num += 2
+      print("number: " + str(num))
+      
 
 even_numbers_to_fifty()
 
@@ -92,6 +106,12 @@ def pattern():
         my_list.append(index)
         print(my_list)
         index += 1
+
+    index = 5 
+    while index >= 0:
+        my_list.pop(index)
+        print(my_list)
+        index -= 1
 
 pattern()
 
