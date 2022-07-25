@@ -34,26 +34,15 @@ dictionary["contents"].append("thing 4")
 print(f"{dictionary['name']} has {dictionary['contents']}")
 print(dictionary)
 
+ 
 
 #-->TODO: Declare a new dictionary and set at least 4 properties to it including: string, boolean, number, list
-
-
 
 ##################################  MY dictionary ########################### #/
 
 
-dictionary = {
-    "relation": "brother",
-    "name": "Jamari Hartley",
-    "birthday": "April 30th",
-    "location": "DC, Maryland",
-    "is_empty": True,
-    "siblings" : "James Hartley, Maya Hartley"
-}
 
-dictionary["Kid(s)"] = 1
-dictionary["age"] = 2
-print(f"{dictionary['name']} is {dictionary['age']}")
+
 
 
 ########################################################################## #/
