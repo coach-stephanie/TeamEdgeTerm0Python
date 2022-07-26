@@ -2,6 +2,7 @@ import random
 import time
 import os
 import sys
+from PIL import Image
 
 finsh_flag = False
 player_items = []
@@ -9,11 +10,12 @@ player_time = 25
 player_tries_requirement = random.randint(2,4)
 
 class Location:
-    def __init__(self, location, moves, actions, atmosphere):
+    def __init__(self, location, moves, actions, atmosphere, image):
         self.location = location
         self.moves = moves
         self.actions = actions
         self.atmosphere = atmosphere
+        self.image = image 
 
     def locate(self, user_input):
         global player_time
@@ -22,7 +24,7 @@ class Location:
         req_dict = dict_1.get(user_input)
         
         if user_input in dict_1.keys():
-            print("\nSucessfully moved to", user_input)
+            print("\nSucessfully moved to the", user_input)
             player_time -= 1
             return req_dict
         else:
@@ -76,18 +78,16 @@ class Location:
             time.sleep(2.5)
             os.execv(sys.executable, ['python'] + sys.argv)
 
-        print(f"\n\n\n\n You're in the {self.location} \n")
-        print(f" {self.atmosphere} ")
-        print(f"\nYou're look around for what you can do... {', '.join(self.moves)}, {', '.join(self.actions)} ")
-        print(f"You have enough energy for {player_time} actions" )
+        self.image.show()
+        print(f"\n\n\n\n--You're in the {self.location}-- \n {self.atmosphere} \n\n\nYou're looking around for what you can do... < {', '.join(self.moves)}, {', '.join(self.actions)} >\n<< You have enough energy for {player_time} actions >>")
 
-lab_game_lounge = Location("Game Lounge", ["hallway"], ["coach jeremy", "play games"], "You now rest in a great area. One full of games to play to your hearts content.")
-lab_orange_room = Location("Orange Room", ["hallway"], ["coach julian"], "You're in a perfect learning room for far as you can see. Some neat things of note are Launch's project. Their plan for their companies")
-lab_blue_room = Location("Blue Room", ["hallway"], ["closet", "coach paul", "work computer"], "You come across the work you got to do on your laptop, the atmosphere here is nice. It's very homey")
-lab_food_bar = Location("Food bar", ["lounge"], [ "closet", "eat food"], "First thing when entering the space you smell the mouth water aroma of the food. It yerns you to eat it." )
-lab_hallway = Location("Hallway", ["lounge", "blue room", "orange room", "game lounge"], ["red room "], "You arrive at a lifted hallway overlooking the lounge. And it greatly attracts your attenion with all the wonderes things on the wall")
-lab_lounge = Location("Lounge", ["hallway", "food bar"], ["printers and etc", "coach stephanie"], "You enter a comfortable and large room, filled to the brim with working space, and many other interesting things")
-lab_entrance = Location("Entrance", ["lounge"], [], "It's a calm monday afternoon. Nice and bright. Your back at code next. Here to make up work you misssed. Well now you better go in and get you coding challenge done. Hmm.. You should go ask a coach for help")
+lab_game_lounge = Location("Game Lounge", ["hallway"], ["coach jeremy", "play games"], "You now rest in a great area. One full of games to play to your hearts content.", Image.open("./picture4.jpg"))
+lab_orange_room = Location("Orange Room", ["hallway"], ["coach julian"], "You're in a perfect learning room for far as you can see. Some neat things of note are Launch's project. Their plan for their companies", Image.open("./picture2.jpg"))
+lab_blue_room = Location("Blue Room", ["hallway"], ["closet", "coach paul", "work computer"], "You come across the work you got to do on your laptop, the atmosphere here is nice. It's very homey", Image.open("./picture5.jpg"))
+lab_food_bar = Location("Food bar", ["lounge"], [ "closet", "eat food"], "First thing when entering the space you smell the mouth water aroma of the food. It yerns you to eat it.", Image.open("./picture6.jpeg"))
+lab_hallway = Location("Hallway", ["lounge", "blue room", "orange room", "game lounge"], ["red room "], "You arrive at a lifted hallway overlooking the lounge. And it greatly attracts your attenion with all the wonderes things on the wall", Image.open("./picture1.jpeg"))
+lab_lounge = Location("Lounge", ["hallway", "food bar"], ["printers and etc", "coach stephanie"], "You enter a comfortable and large room, filled to the brim with working space, and many other interesting things", Image.open("./picture1.jpeg"))
+lab_entrance = Location("Entrance", ["lounge"], [], "It's a calm monday afternoon. Nice and bright. Your back at code next. Here to make up work you misssed. Well now you better go in and get you coding challenge done. Hmm.. You should go ask a coach for help", Image.open("./picture0.jpg"))
 
 current_location = lab_entrance
 
@@ -107,7 +107,7 @@ def user_promts():
     except:
         print("Well you can't do that")    
 
-print("Well here's the deal for this game to do any actions you must type like say if you were given a option to lounge to go there just type lounge. Or to talk to someome type there title like Coach stephanie. Remember your goal is to finish your coding challange. Get much help as you can and remember theres a limit to your actions. Lastly don't worry you don't got to worry about coding")
+print("\nWell here's the deal for this game to do any actions you must type like say if you were given a option to lounge to go there just type lounge. Or to talk to someome type there title like Coach stephanie. Remember your goal is to finish your coding challange. Get much help as you can and remember theres a limit to your actions. Lastly don't worry you don't got to worry about coding")
 
 while finsh_flag == False:
     user_promts()     
