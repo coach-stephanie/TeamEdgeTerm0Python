@@ -27,19 +27,23 @@ class Room:
 
 
 
-items = ["pen", "paper", "ink", "knife", "headset", "key", "directions", "Record"]
+items = ["pen", "ink", "knife", "headset", "key", "ink knife"]
+inventory = []
 
 third_floor = Room("Third Floor", {'West': "Bathroom", "South": "3FStairs", "North": "Electric Room"}, [])
 bathroom = Room("Bathroom", {"East": "Third Floor"}, [0])
-electric_room = Room("Electric Room", {"South": "Third Floor"}, [6])
+electric_room = Room("Electric Room", {"South": "Third Floor"}, [])
 segundo_piso = Room("Second Floor", {"East": "Cockpit", "South": "2FStairs"}, [])
-cockpit = Room("Cockpit", {"West": "Second Floor"}, items)
+cockpit = Room("Cockpit", {"West": "Second Floor"}, [3])
+first_floor = Room("First Floor",{"West": "Restaurant","East": "Workers Keep"}, [])
+restaurant = Room("Restaurant",{"East": "First Floor"}, [1])
+workers_keep = Room("Workers Keep", {"West": "First Floor"}, [2])
 rooms = {
     "Bathroom": {"East": "Third Floor", "item": "pen"},
     "Electric Room": {"South": "Third Floor", "item": "directions"},
     "Second Floor": {"East": "Cockpit","South":  "2FStairs"},
     "Cockpit": {"West": "Second Floor", "item": "Record"},
-    "First Floor": {"Restaurant", "Workers Keep", "Cargo Room"}
+    "First Floor": {"Restaurant", "Workers Keep"}
 }
 def bathroom_instructions(name, direction, items):
     #game directions go here
@@ -103,12 +107,68 @@ first_move = input("What is your first move? You have alot of space on this airc
 while first_move != "go South":
 
     if first_move == "go East":
-        print("Fancy touching dead bodies? Choose another direction to go")
+        print("Fancy touching dead bodies? Choose another direction to go >>> ")
     elif first_move == "go West":
-        current_room = bathroom
         print("You wont find anything in here...")
     elif first_move == "go North":
-        print(f"You need {items[5]} mto go into this room")
+        print(f"You need {items[5]} to go into this room >>> ")
     else:
         print("You sure you can do that??")
     first_move = input("What is your first move? You have alot of space on this aircraft. Choose a cardinal direction.>>>> ")
+
+if first_move == "go South":
+    choice1 = input("You have reached the stairs, do you wish to walk down, or turn back? Type 'go Back' or 'go Down' to make your decision >>> ")
+
+while choice1 != "go Down":
+    if choice1 == "go Back":
+        current_room = third_floor
+        choice_back = input("U scared or something? Choose a direction to go >>> ")
+        while choice_back != "go South":
+            if choice_back == "go East":
+                print("Fancy touching dead bodies? >>> ")
+            elif choice_back == "go West":
+                print("You wont find anything in here... >>> ")
+            elif choice_back == "go North":
+                print(f"You need {items[4]} to go into this room >>> ")
+            else:
+                print("You sure you can do that?? >>>")
+
+            choice_back = input("Choose another direction to go >>>")
+
+        #outside of choice_back loop - give them choice1 option 
+
+        choice1 = "go Down"
+    else:
+        print("Not too sure you can do that")
+        choice1 = input("You have reached the stairs, do you wish to walk down, or turn back? Type 'go Back' or 'go Down' to make your decision >>> ")
+
+#if choice1 == "go Down":
+    #choice1 = input("You have reached the stairs, do you wish to walk down, or turn back? Type 'go Back' or 'go Down' to make your decision >>> ")
+
+#enemy encounter
+if choice1 == "go Down":
+    current_room = segundo_piso
+    print("As you reach downstairs and find more fresh, bleeding, rotting, leaking, smelling corpses at your disposal.")
+
+floor_two = input("Choose a direction to go in using 'go' and a cardinal direction >>> ")
+
+
+if floor_two == "go East":
+    print("Opening cockpit do-")
+    print("AYURGVAUYRBGUAYFUDHAGUKYBSKJTBNSIUTHBUHGBSUHDBSHBISHIBUERBG")
+    
+enemy = input("You have been spotted by a mysterious figure, and it is approaching rapidly. \n Choose 'dodge left', 'dodge right', or 'run away' to do that. >>> ")
+
+if enemy == "dodge right":
+    print("The alien has struck you with its wormlike tail and you have died...What a terrible way to go out")
+    print("TRY AGAIN")
+elif enemy == "run away":
+    print("Your human legs are no match for the serpent alien, it catches your foot right as you break into a sprint, and rips your intestines straight out of your anus. Say goodbye to the world...")
+    print("TRY AGAIN")
+else: 
+    print("Type a valid command")
+
+if enemy == "dodge left":
+    print("You have evaded it's attack and must fight back")
+    print(f"You have {inventory} in your inventory")
+
