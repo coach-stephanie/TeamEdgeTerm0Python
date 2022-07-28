@@ -76,18 +76,18 @@ you = Character("you",1000, 1000, True)
 
 
 
-while move != "go East":
+while move != "go east":
 
-    if move == "go West":
+    if move == "go west":
         print("There is nothing this way except a toilet...")
-    elif move == "go North":
+    elif move == "go north":
         print("I don't think you can go there unless you plan on climbing into the sink")
-    elif move == "go South":
+    elif move == "go south":
         print("Walk into the wall, I dare you")
     else: 
         print("I don't think you can do that")
 
-    move = input("You can type go North/South/East/West to head that way.")
+    move = input("You can type 'go' North/South/East/West to head that way.")
 
 print(cabin_instructions())
 current_room = third_floor
@@ -104,31 +104,31 @@ print("keep in mind you are 50,000 feet in the air and cruising above the Atlant
 
 first_move = input("What is your first move? You have alot of space on this aircraft. Choose a cardinal direction.>>>> ")
     
-while first_move != "go South":
+while first_move != "go south":
 
-    if first_move == "go East":
+    if first_move == "go east":
         print("Fancy touching dead bodies? Choose another direction to go >>> ")
-    elif first_move == "go West":
+    elif first_move == "go west":
         print("You wont find anything in here...")
-    elif first_move == "go North":
+    elif first_move == "go north":
         print(f"You need {items[5]} to go into this room >>> ")
     else:
         print("You sure you can do that??")
     first_move = input("What is your first move? You have alot of space on this aircraft. Choose a cardinal direction.>>>> ")
 
-if first_move == "go South":
+if first_move == "go south":
     choice1 = input("You have reached the stairs, do you wish to walk down, or turn back? Type 'go Back' or 'go Down' to make your decision >>> ")
 
-while choice1 != "go Down":
-    if choice1 == "go Back":
+while choice1 != "go down":
+    if choice1 == "go back":
         current_room = third_floor
         choice_back = input("U scared or something? Choose a direction to go >>> ")
-        while choice_back != "go South":
-            if choice_back == "go East":
+        while choice_back != "go south":
+            if choice_back == "go east":
                 print("Fancy touching dead bodies? >>> ")
-            elif choice_back == "go West":
+            elif choice_back == "go west":
                 print("You wont find anything in here... >>> ")
-            elif choice_back == "go North":
+            elif choice_back == "go north":
                 print(f"You need {items[4]} to go into this room >>> ")
             else:
                 print("You sure you can do that?? >>>")
@@ -137,7 +137,7 @@ while choice1 != "go Down":
 
         #outside of choice_back loop - give them choice1 option 
 
-        choice1 = "go Down"
+        choice1 = "go down"
     else:
         print("Not too sure you can do that")
         choice1 = input("You have reached the stairs, do you wish to walk down, or turn back? Type 'go Back' or 'go Down' to make your decision >>> ")
@@ -146,18 +146,19 @@ while choice1 != "go Down":
     #choice1 = input("You have reached the stairs, do you wish to walk down, or turn back? Type 'go Back' or 'go Down' to make your decision >>> ")
 
 #enemy encounter
-if choice1 == "go Down":
+if choice1 == "go down":
     current_room = segundo_piso
     print("As you reach downstairs and find more fresh, bleeding, rotting, leaking, smelling corpses at your disposal.")
 
 floor_two = input("Choose a direction to go in using 'go' and a cardinal direction >>> ")
 
 
-if floor_two == "go East":
+if floor_two == "go east":
     print("Opening cockpit do-")
     print("AYURGVAUYRBGUAYFUDHAGUKYBSKJTBNSIUTHBUHGBSUHDBSHBISHIBUERBG")
     
 enemy = input("You have been spotted by a mysterious figure, and it is approaching rapidly. \n Choose 'dodge left', 'dodge right', or 'run away' to do that. >>> ")
+
 
 if enemy == "dodge right":
     print("The alien has struck you with its wormlike tail and you have died...What a terrible way to go out")
@@ -167,8 +168,23 @@ elif enemy == "run away":
     print("TRY AGAIN")
 else: 
     print("Type a valid command")
+    
+while enemy != "dodge right" or "run away":
+    enemy = input("You have been spotted by a mysterious figure, and it is approaching rapidly. \n Choose 'dodge left', 'dodge right', or 'run away' to do that. >>> ")
+
 
 if enemy == "dodge left":
     print("You have evaded it's attack and must fight back")
     print(f"You have {inventory} in your inventory")
+    
+attack1 = input("How would you like to attack? Use 'hit left' or 'hit right' to choose >>> ")
+
+if attack1 == "hit left":
+    print("You smacked the shit out of that alien. But...it's an alien so it didn't do much.")
+    print("You have been killed.")
+else:
+    print("That's not a valid command")
+
+if attack1 == "hit right":
+    print("Good thing the aliens last victim ripped a hole in that spot. Well you killed it...")
 
