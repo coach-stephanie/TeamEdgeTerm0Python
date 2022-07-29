@@ -23,7 +23,7 @@ class Location:
         dict_1 = {"game lounge":lab_game_lounge, "orange room":lab_orange_room, "blue room":lab_blue_room, "food bar":lab_food_bar, "hallway":lab_hallway, "lounge":lab_lounge, "entrance":lab_entrance}
         req_dict = dict_1.get(user_input)
         
-        if user_input in dict_1.keys():
+        if user_input in dict_1:
             print("\nSucessfully moved to the", user_input)
             player_time -= 1
             return req_dict
@@ -98,7 +98,7 @@ def user_promts():
         dict_1 = {"game lounge":lab_game_lounge, "orange room":lab_orange_room, "blue room":lab_blue_room, "food bar":lab_food_bar, "hallway":lab_hallway, "lounge":lab_lounge, "entrance":lab_entrance}
 
         current_location.on_enter()
-        user_input = input("\nWell let's pick what you will do. Who knows maybe you need help or need to eat. Well it can't hurt trying.\n\n" ).lower().strip()
+        user_input = input("\nWell let's pick what you will do. Who knows maybe you need help or need to eat. Well it can't hurt trying.\n\n" ).lower().strip() 
         
         if user_input in dict_1:
             current_location = current_location.locate(user_input)
