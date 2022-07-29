@@ -2,8 +2,9 @@
 
 current_room = None
 game_on = True
+print("MAKE SURE YOU TYPE IN LOWERCASE LETTERS ONLY AND NO APOSTROPHIES")
 command = input("Type 'start' to start the game ")
-
+delay = 10
 
 
 class Character:
@@ -49,7 +50,7 @@ def bathroom_instructions(name, direction, items):
     #game directions go here
     print("You should not have eaten that sushi... \n")
     print("Lets get back to first class. The food is getting cold \n")
-    print("You can take this pen here if you want. It could help idk... \n")
+    
 
 if command == "start":
     bathroom_instructions("Bathroom", "East", [0])
@@ -63,6 +64,7 @@ def cabin_instructions():
     print("You are now on the third floor")
     print("What's this? WTF??!?!?! Everyone is... \n")
     print("everyone is dead")
+    
 
 
 
@@ -157,34 +159,58 @@ if floor_two == "go east":
     print("Opening cockpit do-")
     print("AYURGVAUYRBGUAYFUDHAGUKYBSKJTBNSIUTHBUHGBSUHDBSHBISHIBUERBG")
     
-enemy = input("You have been spotted by a mysterious figure, and it is approaching rapidly. \n Choose 'dodge left', 'dodge right', or 'run away' to do that. >>> ")
-
-
-if enemy == "dodge right":
-    print("The alien has struck you with its wormlike tail and you have died...What a terrible way to go out")
-    print("TRY AGAIN")
-elif enemy == "run away":
-    print("Your human legs are no match for the serpent alien, it catches your foot right as you break into a sprint, and rips your intestines straight out of your anus. Say goodbye to the world...")
-    print("TRY AGAIN")
-else: 
-    print("Type a valid command")
     
-while enemy != "dodge right" or "run away":
-    enemy = input("You have been spotted by a mysterious figure, and it is approaching rapidly. \n Choose 'dodge left', 'dodge right', or 'run away' to do that. >>> ")
+attack1 = input("You have found an alien. How would you like to attack? Use 'hit left' or 'hit right' to choose >>> ")
+while attack1 != "hit right":
+    if attack1 == "hit left":
+        print("You smacked the shit out of that alien. But...it's an alien so it didn't do much.")
+        print("You have been killed.")
+        quit()
+    else:
+        print("That's not a valid command")
+    attack1 = input("You have found an alien. How would you like to attack? Use 'hit left' or 'hit right' to choose >>> ")
 
-
-if enemy == "dodge left":
-    print("You have evaded it's attack and must fight back")
-    print(f"You have {inventory} in your inventory")
-    
-attack1 = input("How would you like to attack? Use 'hit left' or 'hit right' to choose >>> ")
-
-if attack1 == "hit left":
-    print("You smacked the shit out of that alien. But...it's an alien so it didn't do much.")
-    print("You have been killed.")
-else:
-    print("That's not a valid command")
 
 if attack1 == "hit right":
     print("Good thing the aliens last victim ripped a hole in that spot. Well you killed it...")
 
+land = input("You are now in the cockpit, and in control of this jumbo jet. But whats this? \n No tower communication? Looks like you might have to fly this plane inexperienced.\n Choose 'turn left' or 'turn right' to make a decision. >> ")
+while land != "turn right":
+    if land == "turn left":
+        print("You and another plane had the same idea, and you two havbe collided. Now you have added to the death toll...")
+        print("GAME OVER")
+        quit()
+    else:
+        print("Type a valid command")
+        land = input("You are now in the cockpit, and in control of this jumbo jet. But whats this? \n No tower communication? Looks like you might have to fly this plane inexperienced.\n Choose 'turn left' or 'turn right' to make a decision. >> ")
+
+if land == "turn right":
+    print("You have evaded a flight that was in your way. You are now on course to safety")
+
+last = input("You are decreasing at a steady pace. Choose 'more speed' , 'less speed' , or 'dont move' to make some final adjustments. >>> ")
+
+while last != "dont move":
+    if last == "less speed":
+        print("Stalling...Stalling...YOU ARE GOING DOWN HERBGVHIWEBRVBDFGHJBFKUHBSUFGBUYOWHBFUYWHERIUYGHWIUERGHUWYERHGUYWERHBVUWHBERUIVHWIUERHIUYQHRGIUYWHDFOIBGQIDFBHVWOUEIRHOIUEHRBOIEHRNOIVQHBERUOYVHBQEIORUHWIERHVOIUQEHROIVUQHEROIUVHQEOIURVHOIUWERBNVIULWEFHBVUWHERKVUSBEKUVBSKUFVBSUKFBVSUBV\n The plane has exploded and you have died")
+        quit()
+    elif last == "more speed":
+        print("You are contradicting the commands of the autopilot. The computer system has gotten furious and self destructed. \n You are dead now.")
+        print("GAME OVER")
+        quit()
+    else:
+        print("Type a valid command")
+    last = input("You are decreasing at a steady pace. Choose 'more speed' , 'less speed' , or 'dont move' to make some final adjustments. >>> ")
+
+if last == "dont move":
+    print("The autopilot is flying really well and has landed the mighty Airbus A380 \n You have made it to safety")
+
+print("As you exit the plane, you look to the sky and see fireworks...you have ma- \n Yo- hvae mdae it to the ariortp adn yuo aer sfae- \n Waht si ginog on?")
+
+print("The world turns black, and you wake up inside a dim room, with machinery powering off.")
+print(" 'Welcome back Mrs. Gedes' 'Thank you for testing our virtual reality genesis V121'. 'Please leave, while we send your payment to 2324 Sandbag Ave' 'You have passed the test and finished the game'. ")
+wtf = input("As you leave the building and walk home, you wonder to yourself 'what the fuck just happened' >>> ")
+
+if wtf == "what the fuck just happened":
+    print("YOU WIN WOOHOOOO THANK YOU FOR PLAYING WOOHOOOOOO")
+else:
+    print("YOU STILL WIN EVEN THOUGH YOU DIDNT TYPE 'what the fuck just happened' WOOHOOOOOO")
