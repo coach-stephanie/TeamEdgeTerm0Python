@@ -27,11 +27,11 @@ import random
 	# Print instructions on the screen and 
 	# prompt the user to ask a question
 
-	
+print("How a Magic 8 Ball Works... The user asks a question and vigoriously shakes the ball... Then the ball will respond with one of twenty responses, chosen at random...Thats pretty simple.")
 
   # --------------------------------------------
 
-
+ques = input("Ask me anything")
 
 
 
@@ -51,7 +51,7 @@ import random
 
 	# Randomly select a number from 0 - 19 
 	# Use that to select from the following responses:
-		# 0 - It is certain.
+ 
 		# 1 - It is decidedly so.
 		# 2 - Without a doubt.
 		# 3 - Yes - definitely.
@@ -75,11 +75,9 @@ import random
 	# Look up random.rand_int to see how you can use it to select a random number.
 
   # -------------------------------------------- 
-
-
-
-
-
+rand = random.randint(0,19)
+if rand > -1:
+	print({0})
 
 
 

@@ -41,7 +41,13 @@ print(dictionary)
 ##################################  MY dictionary ########################### #/
 
 
+dictionary1 = {
+    "name": "Arthur" ,
+    "age": 46,
+    "alive": True, 
+    "limbs":["arm", "fingers", "legs", "toes"]
 
+}
 
 
 
@@ -52,24 +58,27 @@ print(dictionary)
 print("------------------- CHALLENGE 2 : MODIFY   -------------------")
 
 #-->TODO: Print your dictionary you created above
-
+print(dictionary1)
 
 #-->TODO: Update the dictionary you just created  by adding new properties and values, including list elements, in this section.
-
+dictionary1["age"] = "1"
 
 #-->TODO: Print your dictionary again and observe changes
-
+print(dictionary1)
 
 print("------------------- CHALLENGE 3 : MEHTODS   -------------------")
 
 
 #-->TODO: Make a method that will update your dictionary value. It should take in a dictionary and return it modified.
-
-
+def update():
+    while dictionary1["age"] == 1:
+        print("something is happening...i keep repeating") 
+update()
 #-->TODO: Call the method.
-
+print(dictionary1)
 
 
 print("------------------- CHALLENGE 4 : LITERALLY   -------------------")
 
 #-->TODO: Put it all together using a string literal to tell the story of your dictionary!
+ 

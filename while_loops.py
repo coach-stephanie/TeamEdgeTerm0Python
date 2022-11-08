@@ -41,16 +41,28 @@ def test_prime(n):
     return True
 
 #-->TODO: Declare a while loop that prints all the prime numbers between 0 and 100, use test_prime() helper function
+number = 0
+while number <= 100:
+  if test_prime(number):
+    print(number)
 
-
-
+  number += 1
+test_prime(2)
 print("------------------- CHALLENGE 2 : FOUND   -------------------")
 
 #here is a list full of items
 items = ["pencil" , "eraser" , "mirror" , "comb" , "spoon" , "key" , "earrings" ,"cat food" , "magazine"]
 
 #-->TODO: Use a while loop to search the contents of a list for the key! If it exists, print "found the key!"
-
+user_ans = True
+while user_ans:
+  ans = input("Choose any household object >>>> ")
+  if ans in items:
+    print("Object in list, good job!")
+    user_ans = False
+  else: 
+    print("Object not in list, try again")
+    user_ans = True
 
 
 print("------------------- CHALLENGE 3 : BUGGIN   -------------------")
@@ -107,7 +119,7 @@ print("------------------- CHALLENGE 4 : MATH QUIZ   -------------------")
 is_correct = False
 
 
-print("------------------- CHALLENGE 5 : WHAT AM I?   -------------------")
+print("------------------- CHALLENGE 5 : WHAT AM I?   -------------------")       
 
 #-->TODO: Write a game loop that prompts that never stops asking, "I know you are a _____, but what am I?"
 #         You are given two starter functions and a loop to get started! 
